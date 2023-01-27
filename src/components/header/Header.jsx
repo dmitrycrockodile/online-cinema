@@ -8,19 +8,19 @@ function Header(props) {
       <div className={styles.header}>
          <div className="container">
             <div className={styles.headerInner}>
-               <a className="logo" href="/">
+               <a href="/">
                   <img src={logo} alt="Our logo" />
                </a>
                <nav className={styles.menu}>
-                  <ul className="menu__list">
-                     <li className="menu__item">
-                        <a className="menu__link" href="/">Как купить</a>
+                  <ul>
+                     <li>
+                        <a href="/">Как купить</a>
                      </li>
-                     <li className="menu__item">
-                        <a className="menu__link" href="/">F.A.Q</a>
+                     <li>
+                        <a href="/">F.A.Q</a>
                      </li>
-                     <li className="menu__item">
-                        <a className="menu__link" href="/">Контакты</a>
+                     <li>
+                        <a href="/">Контакты</a>
                      </li>
                   </ul>
                </nav>
@@ -28,8 +28,8 @@ function Header(props) {
                   <img src={searchIcon} alt="Search" />
                </button>
                <div className={styles.user}>
-                  <a className={styles.userReg} href="/">Регистрация</a>
-                  <a className={styles.userLogin} href="/">Войти</a>
+                  <a className={styles.register} href="/">Регистрация</a>
+                  <a className={styles.login} href="/">Войти</a>
                </div>
             </div>
          </div>
