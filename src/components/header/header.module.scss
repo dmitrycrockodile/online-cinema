@@ -1,0 +1,56 @@
+.header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 5rem 0;
+   background: rgba(0, 0, 0, 0.9);
+   font-size: 1.6rem;
+   line-height: 1.8rem;
+   img {
+      display: block;
+   }
+}
+
+.headerInner {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 2rem;
+}
+
+.menu {
+   margin: 0 auto;
+   ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 8rem;
+   }
+   a {
+      text-decoration-line: underline;
+   }
+}
+
+.search {
+   margin-right: 5.5rem;
+}
+
+.user {
+   display: flex;
+   gap: 2rem;
+   a {
+      display: inline-block;
+      font-weight: 700;
+      border-radius: 5rem;
+      padding: 1rem 3rem;
+   }
+}
+
+.userReg {
+   border: 2px solid #fff;
+}
+
+.userLogin {
+   border: 1px solid #000000;
+   background: #EC8F32;
+}
