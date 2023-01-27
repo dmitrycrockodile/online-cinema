@@ -1,0 +1,38 @@
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  color: #fff;
+  background-color: #0F1014;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+}
