@@ -30,7 +30,21 @@
       gap: 1rem 8rem;
    }
    a {
-      text-decoration-line: underline;
+      position: relative;
+      &::after {
+         content: '';
+         position: absolute;
+         height: 1px;
+         width: 100%;
+         left: 0;
+         bottom: 0;
+         background-color: #fff;
+         transition: all .3s;
+         opacity: 1;
+      }
+      &:hover::after {
+         opacity: 0;
+      }
    }
 }
 
@@ -51,6 +65,11 @@
 
 .register {
    border: 2px solid #fff;
+   transition: all .3s;
+   &:hover {
+      border-color: #EC8F32;
+      color: #EC8F32;
+   }
 }
 
 .login {

@@ -1,7 +1,7 @@
 import logo from "../../assets/img/header-logo.svg";
-import searchIcon from '../../assets/icons/search.svg';
 
 import styles from "./header.module.scss";
+import Search from "../search/Search";
 
 function Header(props) {
    return (
@@ -24,8 +24,11 @@ function Header(props) {
                      </li>
                   </ul>
                </nav>
+               <Search />
                <button className={styles.search}>
-                  <img src={searchIcon} alt="Search" />
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M22 22L15 15M17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                </button>
                <div className={styles.user}>
                   <a className={styles.register} href="/">Регистрация</a>
