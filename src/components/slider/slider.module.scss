@@ -1,0 +1,40 @@
+.mainContainer {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+.itemsContainer {
+   height: 100%;
+   display: flex;
+}
+
+.dots {
+   position: absolute;
+   bottom: 20rem;
+   display: flex;
+   align-items: center;
+}
+
+.dot {
+   width: 1.2rem;
+   height: 1.2rem;
+   background-color: #FFFFFF;
+   border-radius: 50%;
+   transition: all .2s ease-out;
+
+   &:not(:first-child) {
+      margin-left: 1.5rem;
+   }
+
+   &:hover {
+      background-color: #c7c7c7;
+   }
+
+   &.active {
+      background-color: #EC8F32;
+      width: 1.9rem;
+      height: 1.9rem;
+   }
+}
