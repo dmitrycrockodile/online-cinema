@@ -12,9 +12,10 @@
 
 .dots {
    position: absolute;
-   bottom: 20rem;
+   bottom: 0;
    display: flex;
    align-items: center;
+   margin-bottom: 14%;
 }
 
 .dot {
