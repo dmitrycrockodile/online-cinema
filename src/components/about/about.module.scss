@@ -1,0 +1,33 @@
+.about {
+   padding: 16rem 0;
+}
+
+.aboutItems {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 3rem;
+   margin-bottom: 17rem;
+   flex-basis: 58rem;
+}
+
+.aboutItem {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 6rem;
+   padding: 4.0rem 6.0rem;
+   border: 2.5px solid rgba(255, 255, 255, 0.3);
+   border-radius: 2.5rem;
+
+   svg {
+      flex-shrink: 0;
+   }
+}
+
+.companiesLinks {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 2rem 8rem;
+}
