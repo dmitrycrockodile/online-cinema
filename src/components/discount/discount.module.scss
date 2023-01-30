@@ -1,0 +1,71 @@
+.discount {
+   padding: 16rem 0 15rem;
+}
+
+.discountInner {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 6rem;
+   border: 3px solid rgba(255, 255, 255, 0.3);
+   border-radius: 2.5rem;
+   padding: 4rem 6rem;
+
+   position: relative;
+}
+
+.film {
+   position: absolute;
+   left: -5px;
+   height: 26rem;
+   img {
+      height: 100%;
+      border-radius: 2.5rem;
+   }
+}
+
+.playBtn {
+   width: 8.5rem;
+   height: 8.5rem;
+   border-radius: 50%;
+   background-color: #EC8F32;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 10;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   svg {
+      width: 2.5rem;
+      height: 3rem;
+   }
+}
+
+.text {
+   max-width: 55rem;
+   h4 {
+      font-size: 3.2rem;
+      line-height: 6rem;
+      background: linear-gradient(266.28deg, #FFFFFF 29.05%, rgba(255, 255, 255, 0.28) 114.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+   }
+
+   p {
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+   }
+}
+
+.btn {
+   background: #EC8F32;
+   border-radius: 5rem;
+   padding: 2.5rem 3rem;
+   font-size: 1.8rem;
+   line-height: 2rem;
+   color: #FFFFFF;
+}

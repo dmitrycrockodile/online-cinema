@@ -4,6 +4,7 @@ import Footer from './components/footer/Footer';
 
 import styles from './App.module.scss';
 import About from './components/about/About';
+import Discount from './components/discount/Discount';
 
 function App() {
    return (
@@ -54,6 +55,7 @@ function App() {
                </Slider>
             </div>
             <About />
+            <Discount />
          </main>
          <Footer />
       </div>
