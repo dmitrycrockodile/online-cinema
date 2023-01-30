@@ -1,6 +1,8 @@
-import styles from './discount.module.scss';
+import MainButton from '../mainButton/MainButton';
 
 import filmImg from '../../assets/img/film.webp';
+
+import styles from './discount.module.scss';
 
 const Discount = () => {
    return (
@@ -19,9 +21,11 @@ const Discount = () => {
                   <h4>Eжедневное преимущество!</h4>
                   <p>Даже полтора часа в день (в среднем столько занимает время на дорогу в мегаполисе на работу и домой), посвященных аудиочтению!</p>
                </div>
-               <button className={styles.btn}>
-                  Получить скидку
-               </button>
+               <MainButton
+                value="Получить скидку"
+                size="big"
+                type="fullOrange"
+               />
             </div>
          </div>
       </div>
