@@ -5,19 +5,18 @@
 .discountInner {
    display: flex;
    align-items: center;
-   justify-content: flex-end;
    gap: 6rem;
    border: 3px solid rgba(255, 255, 255, 0.3);
    border-radius: 2.5rem;
-   padding: 4rem 6rem;
-
    position: relative;
 }
 
 .film {
-   position: absolute;
+   position: relative;
    left: -5px;
    height: 26rem;
+   transform: scale(1.2);
+
    img {
       height: 100%;
       border-radius: 2.5rem;
