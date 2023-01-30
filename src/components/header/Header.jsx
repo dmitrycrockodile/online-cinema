@@ -16,13 +16,13 @@ function Header(props) {
                <nav className={styles.menu}>
                   <ul>
                      <li>
-                        <a href="/">Как купить</a>
+                        <a className="underlined" href="/">Как купить</a>
                      </li>
                      <li>
-                        <a href="/">F.A.Q</a>
+                        <a className="underlined" href="/">F.A.Q</a>
                      </li>
                      <li>
-                        <a href="/">Контакты</a>
+                        <a className="underlined" href="/">Контакты</a>
                      </li>
                   </ul>
                </nav>

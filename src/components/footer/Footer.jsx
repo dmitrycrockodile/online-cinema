@@ -1,7 +1,6 @@
 import logo from "../../assets/img/footer-logo.svg";
 
 import styles from "./footer.module.scss";
-import "../../assets/style/utils.scss";
 
 function Footer() {
    return (
@@ -18,19 +17,19 @@ function Footer() {
                      <h4>Жанры</h4>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Нонфикшн</a>
+                     <a className="underlined" href="/">Нонфикшн</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Псиология</a>
+                     <a className="underlined" href="/">Псиология</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Бизнес</a>
+                     <a className="underlined" href="/">Бизнес</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Финансы</a>
+                     <a className="underlined" href="/">Финансы</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Все жанры</a>
+                     <a className="underlined" href="/">Все жанры</a>
                   </li>
                   </ul>
 
@@ -39,13 +38,13 @@ function Footer() {
                      <h4>Категории</h4>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Популярное</a>
+                     <a className="underlined" href="/">Популярное</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Новинки</a>
+                     <a className="underlined" href="/">Новинки</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Выбор редакции</a>
+                     <a className="underlined" href="/">Выбор редакции</a>
                   </li>
                   </ul>
 
@@ -54,16 +53,16 @@ function Footer() {
                      <h4>Разделы</h4>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Как купить</a>
+                     <a className="underlined" href="/">Как купить</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Часто задаваемые вопросы</a>
+                     <a className="underlined" href="/">Часто задаваемые вопросы</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Сотрудничество</a>
+                     <a className="underlined" href="/">Сотрудничество</a>
                   </li>
                   <li className={styles.listItem}>
-                     <a href="/">Контакты</a>
+                     <a className="underlined" href="/">Контакты</a>
                   </li>
                   </ul>
                </div>
@@ -75,9 +74,9 @@ function Footer() {
                <div className={styles.copyright}>
                   <p>© 2022, «Аудитерия». Все права защищены.</p>
                   <div className={styles.links}>
-                     <a href="/">Политика конфиденциальности</a>
+                     <a className="underlined" href="/">Политика конфиденциальности</a>
                      <span className={styles.gap}></span>
-                     <a href="/">Лицензионное соглашение</a>
+                     <a className="underlined" href="/">Лицензионное соглашение</a>
                   </div>
                </div>
                <div className={styles.logos}>

@@ -22,9 +22,9 @@ const Discount = () => {
                   <p>Даже полтора часа в день (в среднем столько занимает время на дорогу в мегаполисе на работу и домой), посвященных аудиочтению!</p>
                </div>
                <MainButton
-                value="Получить скидку"
-                size="big"
-                type="fullOrange"
+                  value="Получить скидку"
+                  size="big"
+                  type="fullOrange"
                />
             </div>
          </div>

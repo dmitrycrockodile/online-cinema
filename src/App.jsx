@@ -1,6 +1,7 @@
 import Header from './components/header/Header';
 import Slider from './components/slider/Slider';
 import MainButton from './components/mainButton/MainButton';
+import FilmCard from './components/filmCard/FilmCard';
 import Footer from './components/footer/Footer';
 
 import styles from './App.module.scss';
@@ -67,6 +68,7 @@ function App() {
                   </div>
                </Slider>
             </div>
+            <FilmCard />
             <About />
             <Discount />
          </main>

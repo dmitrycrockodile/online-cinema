@@ -31,23 +31,6 @@
       flex-wrap: wrap;
       gap: 1rem 8rem;
    }
-   a {
-      position: relative;
-      &::after {
-         content: '';
-         position: absolute;
-         height: 1px;
-         width: 100%;
-         left: 0;
-         bottom: 0;
-         background-color: $color-white;
-         transition: all .3s;
-         opacity: 1;
-      }
-      &:hover::after {
-         opacity: 0;
-      }
-   }
 }
 
 .search {
