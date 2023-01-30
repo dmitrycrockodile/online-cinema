@@ -1,3 +1,5 @@
+@import "../../assets/style/variables.scss";
+
 .about {
    padding: 16rem 0;
 }
@@ -16,7 +18,7 @@
    justify-content: space-between;
    gap: 6rem;
    padding: 4.0rem 6.0rem;
-   border: 2.5px solid rgba(255, 255, 255, 0.3);
+   border: 2.5px solid rgba($color-white, 0.3);
    border-radius: 2.5rem;
 
    svg {

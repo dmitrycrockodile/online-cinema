@@ -1,0 +1,90 @@
+@import "../../assets/style/variables.scss";
+
+//GLOBAL STYLE
+.btn {
+   border-radius: $main-border;
+   color: $color-white;
+   transition: all .2s ease-in;
+   position: relative;
+   z-index: 10;
+   font-weight: 700;
+}
+
+//SIZES
+.huge {
+   padding: 2.8rem 5rem;
+   font-size: 2.4rem;
+   line-height: 2.8rem;
+}
+
+.big {
+   padding: 2.5rem 4rem;
+   font-size: 1.8rem;
+   line-height: 2.1rem;
+}
+
+.medium {
+   padding: 1rem 3rem;
+   font-size: 1.6rem;
+}
+
+.small {
+   padding: .8rem 3rem;
+   font-size: 1.2rem;
+}
+
+//TYPES
+.fullOrange {
+   background: $color-orange;
+
+   &::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: calc($main-border * 2);
+      position: absolute;
+      transform: scale(1);
+      background-color: $color-orange;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all .3s;
+   }
+
+   &:hover {
+      opacity: .85;
+
+      &::before {
+         transform: scale(1.2);
+         opacity: 0;
+      }
+   }
+}
+
+.transparent {
+   background-color: transparent;
+}
+
+//BORDERS
+.blackBorder {
+   border: 1px solid $color-black;
+}
+
+.whiteBorder {
+   border: 2px solid $color-white;
+
+   &:hover {
+      border-color: $color-orange;
+      color: $color-orange;
+   }
+}
+
+.orangeBorder {
+   border: 2px solid $color-orange;
+}
+
+//COLORS
+.orangeColor {
+   color: $color-orange;
+}

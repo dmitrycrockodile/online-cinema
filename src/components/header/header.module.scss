@@ -1,10 +1,12 @@
+@import "../../assets/style/variables.scss";
+
 .header {
    position: absolute;
    top: 0;
    left: 0;
    width: 100%;
    padding: 5rem 0;
-   background: rgba(0, 0, 0, 0.9);
+   background: rgba($color-black, 0.9);
    opacity: .8;
    font-size: 1.6rem;
    line-height: 1.8rem;
@@ -38,7 +40,7 @@
          width: 100%;
          left: 0;
          bottom: 0;
-         background-color: #fff;
+         background-color: $color-white;
          transition: all .3s;
          opacity: 1;
       }
@@ -55,24 +57,4 @@
 .user {
    display: flex;
    gap: 2rem;
-   a {
-      display: inline-block;
-      font-weight: 700;
-      border-radius: 5rem;
-      padding: 1rem 3rem;
-   }
-}
-
-.register {
-   border: 2px solid #fff;
-   transition: all .3s;
-   &:hover {
-      border-color: #EC8F32;
-      color: #EC8F32;
-   }
-}
-
-.login {
-   border: 1px solid #000000;
-   background: #EC8F32;
 }

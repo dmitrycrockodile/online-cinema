@@ -1,5 +1,6 @@
 import Header from './components/header/Header';
 import Slider from './components/slider/Slider';
+import MainButton from './components/mainButton/MainButton';
 import Footer from './components/footer/Footer';
 
 import styles from './App.module.scss';
@@ -21,7 +22,11 @@ function App() {
                                  Лучшая подборка аудиокниг по психологиии саморазвитию за все годы издательства...
                               </p>
                            </div>
-                           <button className={styles.slideBtn}>Выбрать книгу</button>
+                           <MainButton 
+                              value="Выбрать книгу"
+                              size="huge"
+                              type="fullOrange"                        
+                           />
                         </div>
                      </div>
                   </div>
@@ -34,7 +39,11 @@ function App() {
                                  Лучшая подборка аудиокниг по психологиии саморазвитию за все годы издательства...
                               </p>
                            </div>
-                           <button className={styles.slideBtn}>Выбрать книгу</button>
+                           <MainButton 
+                              value="Выбрать книгу"
+                              size="huge"
+                              type="fullOrange"                        
+                           />
                         </div>
                      </div>
                   </div>
@@ -47,7 +56,11 @@ function App() {
                                  Лучшая подборка аудиокниг по психологиии саморазвитию за все годы издательства...
                               </p>
                            </div>
-                           <button className={styles.slideBtn}>Выбрать книгу</button>
+                           <MainButton 
+                              value="Выбрать книгу"
+                              size="huge"
+                              type="fullOrange"                        
+                           />
                         </div>
                      </div>
                   </div>

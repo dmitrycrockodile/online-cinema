@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 html {
 	font-size: 62.5%; /* 1rem = 10px */
 }
@@ -19,8 +21,8 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   font-size: 21px;
-  color: #fff;
-  background-color: #0F1014;
+  color: $color-white;
+  background-color: $color-black-back;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,3 +1,5 @@
+@import "../../assets/style/variables.scss";
+
 .search {
    position: relative;
    width: 100%;
@@ -8,14 +10,15 @@
    width: 100%;
    padding: 1rem 5rem 1rem 2.5rem;
    background-color: transparent;
-   border: 2px solid #FFFFFF;
-   border-radius: 5rem;
+   border: 2px solid $color-white;
+   border-radius: $main-border;
    font-weight: 300;
    font-size: 1.4rem;
    line-height: 1.6rem;
-   color: #FFFFFF;
+   color: $color-white;
+   
    &::placeholder {
-      color: #FFFFFF;
+      color: $color-white;
       font-size: 1.4rem;
       line-height: 1.6rem;
    }

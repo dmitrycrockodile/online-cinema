@@ -3,6 +3,8 @@ import logo from "../../assets/img/header-logo.svg";
 import styles from "./header.module.scss";
 import Search from "../search/Search";
 
+import MainButton from "../mainButton/MainButton";
+
 function Header(props) {
    return (
       <div className={styles.header}>
@@ -31,8 +33,18 @@ function Header(props) {
                   </svg>
                </button>
                <div className={styles.user}>
-                  <a className={styles.register} href="/">Регистрация</a>
-                  <a className={styles.login} href="/">Войти</a>
+                  <MainButton 
+                     value="Регистрация"
+                     size="medium"
+                     border="whiteBorder"
+                     type="transparent"
+                  />
+                  <MainButton 
+                     value="Войти"
+                     size="medium"
+                     border="blackBorder"
+                     type="fullOrange"
+                  />
                </div>
             </div>
          </div>
