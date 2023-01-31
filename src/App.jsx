@@ -2,6 +2,7 @@ import Header from './components/header/Header';
 import Slider from './components/slider/Slider';
 import MainButton from './components/mainButton/MainButton';
 import FilmList from './components/filmList/FilmList';
+import TabBar from './components/tabBar/TabBar';
 import Footer from './components/footer/Footer';
 
 import styles from './App.module.scss';
@@ -87,6 +88,7 @@ function App() {
                      button
                   />
                </div>
+               <TabBar />
                <About />
                <Discount />
             </div>
