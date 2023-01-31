@@ -3,9 +3,9 @@ import styles from "./slider.module.scss";
 function Slider({children}) {
    return (
       <div className={styles.mainContainer}>
-         <div className={styles.itemsContainer}>
+         <ul className={styles.itemsContainer}>
             {children}
-         </div>
+         </ul>
          
          <div className="container">
             <div className={styles.dots}>

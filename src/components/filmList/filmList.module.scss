@@ -1,0 +1,24 @@
+@import "../../assets/style/variables.scss";
+
+.root {
+
+}
+
+.info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-bottom: 3.3rem;
+}
+
+.title {
+   font-weight: 500;
+   font-size: 3.2rem;
+   line-height: 3.7rem;
+   color: $color-white;
+}
+
+.list {
+   display: flex;
+   justify-content: space-between;
+}

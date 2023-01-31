@@ -1,7 +1,7 @@
 import Header from './components/header/Header';
 import Slider from './components/slider/Slider';
 import MainButton from './components/mainButton/MainButton';
-import FilmCard from './components/filmCard/FilmCard';
+import FilmList from './components/filmList/FilmList';
 import Footer from './components/footer/Footer';
 
 import styles from './App.module.scss';
@@ -15,7 +15,7 @@ function App() {
          <main>
             <div className={styles.banner}>
                <Slider>
-                  <div className={styles.slide}>
+                  <li className={styles.slide}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -31,8 +31,8 @@ function App() {
                            />
                         </div>
                      </div>
-                  </div>
-                  <div className={styles.slide}>
+                  </li>
+                  <li className={styles.slide}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -48,8 +48,8 @@ function App() {
                            />
                         </div>
                      </div>
-                  </div>
-                  <div className={styles.slide}>
+                  </li>
+                  <li className={styles.slide}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -65,12 +65,31 @@ function App() {
                            />
                         </div>
                      </div>
-                  </div>
+                  </li>
                </Slider>
             </div>
-            <FilmCard />
-            <About />
-            <Discount />
+            <div className="container">
+               <div className={styles.wrapper}>
+                  <FilmList 
+                     title="Новинки"
+                     button
+                  />
+               </div>
+               <div className={styles.wrapper}>
+                  <FilmList 
+                     title="Популярное"
+                     button
+                  />
+               </div>
+               <div className={styles.wrapper}>
+                  <FilmList 
+                     title="Выбор редакции"
+                     button
+                  />
+               </div>
+               <About />
+               <Discount />
+            </div>
          </main>
          <Footer />
       </div>
