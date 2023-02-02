@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer';
 import styles from './App.module.scss';
 import About from './components/about/About';
 import Discount from './components/discount/Discount';
+import Selections from './components/selections/Selections';
 
 function App() {
    return (
@@ -89,6 +90,7 @@ function App() {
                   />
                </div>
                <TabBar />
+               <Selections />
                <About />
                <Discount />
             </div>

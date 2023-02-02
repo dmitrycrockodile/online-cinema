@@ -1,0 +1,35 @@
+@import "../../assets/style/variables.scss";
+
+.selections {
+   margin-top: 12rem;
+}
+
+.selectionsInner {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 3rem;
+}
+
+.selectionsTitle {
+   font-weight: 500;
+   font-size: 3.2rem;
+   line-height: 3.7rem;
+   color: $color-white;
+   
+   margin-bottom: 2rem;
+}
+
+.item {
+   position: relative;
+   border-radius: 2.5rem;
+   overflow: hidden;
+
+   p {
+      position: absolute;
+      bottom: 2rem;
+      left: 3rem;
+
+      font-weight: 700;
+      font-size: 2.4rem;
+   }
+}
