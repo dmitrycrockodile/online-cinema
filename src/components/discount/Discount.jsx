@@ -1,6 +1,6 @@
 import MainButton from '../mainButton/MainButton';
 
-import filmImg from '../../assets/img/film.webp';
+import filmImg from '../../assets/img/film2.webp';
 
 import styles from './discount.module.scss';
 
