@@ -22,7 +22,7 @@ body {
   font-weight: 500;
   font-size: 21px;
   color: $color-white;
-  background-color: $color-black-back;
+  background: linear-gradient(to left top, $color-green-back, $color-black-back);
 }
 
 h1, h2, h3, h4, h5, h6 {

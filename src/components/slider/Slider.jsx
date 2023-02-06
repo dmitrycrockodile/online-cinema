@@ -23,16 +23,16 @@ function Slider({ children }) {
       )
    }, [children])
 
-   // useEffect(() => {
-   //    const timer = setTimeout(() => {
-   //       if (offset === _maxOffset) {
-   //          setOffset(0)
-   //       } else {
-   //          setOffset(offset + _slideWidth)
-   //       }
-   //    }, 5000);
-   //    return () => clearTimeout(timer)
-   // });
+   useEffect(() => {
+      const timer = setTimeout(() => {
+         if (offset === _maxOffset) {
+            setOffset(0)
+         } else {
+            setOffset(offset + _slideWidth)
+         }
+      }, 5000);
+      return () => clearTimeout(timer)
+   });
 
    const onDotClick = (index) => {
       setOffset(_slideWidth * index)
