@@ -24,11 +24,29 @@
    border-radius: 2.5rem;
    overflow: hidden;
 
+   img {
+      transition: all .4s;
+   }
+
+   &:hover {
+      img {
+         filter: blur(10px);
+      }
+
+      p {
+         transform: translate(-50%);
+         left: 50%;
+         bottom: 50%;
+         transition: all .3s ease;
+      }
+   }
+
    p {
       position: absolute;
       bottom: 2rem;
       left: 3rem;
-
+      width: max-content;
+      transition: all .3s ease;
       font-weight: 700;
       font-size: 2.4rem;
    }

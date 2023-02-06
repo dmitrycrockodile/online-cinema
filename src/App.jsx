@@ -3,12 +3,13 @@ import Slider from './components/slider/Slider';
 import MainButton from './components/mainButton/MainButton';
 import FilmList from './components/filmList/FilmList';
 import TabBar from './components/tabBar/TabBar';
-import Footer from './components/footer/Footer';
-
-import styles from './App.module.scss';
 import About from './components/about/About';
 import Discount from './components/discount/Discount';
 import Selections from './components/selections/Selections';
+import Footer from './components/footer/Footer';
+
+import styles from './App.module.scss';
+import FilmCard from './components/filmCard/FilmCard';
 
 function App() {
    return (
@@ -17,7 +18,7 @@ function App() {
          <main>
             <div className={styles.banner}>
                <Slider>
-                  <li className={styles.slide}>
+                  <li className={`${styles.slide} ${styles.slide1}`}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -34,7 +35,7 @@ function App() {
                         </div>
                      </div>
                   </li>
-                  <li className={styles.slide}>
+                  <li className={`${styles.slide} ${styles.slide2}`}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -51,7 +52,7 @@ function App() {
                         </div>
                      </div>
                   </li>
-                  <li className={styles.slide}>
+                  <li className={`${styles.slide} ${styles.slide3}`}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -89,7 +90,46 @@ function App() {
                      button
                   />
                </div>
-               <TabBar />
+               <TabBar>
+                  <ul className={styles.tabList} label="Новинки">
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                  </ul>
+
+                  <ul className={styles.tabList} label="Популярное">
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                  </ul>
+
+                  <ul className={styles.tabList} label="Выбор редакции">
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                     <li><FilmCard /></li>
+                  </ul>
+               </TabBar>
                <Selections />
                <About />
                <Discount />

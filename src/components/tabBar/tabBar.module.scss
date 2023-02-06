@@ -9,7 +9,24 @@
    font-size: 3.2rem;
    line-height: 3.7rem;
    color: $color-orange;
-   text-decoration: underline;
+   position: relative;
+   transition: all .2s;
+
+   &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: 4px;
+      background-color: $color-orange;
+      transition: all .3s;
+      opacity: 1;
+   }
+
+   &:hover::after {
+      opacity: 0;
+   }
 
    &:not(:first-child) {
       margin-left: 4rem;
@@ -18,6 +35,10 @@
    &.active {
       color: $color-white;
       text-decoration: none;
+
+      &::after {
+         display: none;
+      }
    }
 }
 

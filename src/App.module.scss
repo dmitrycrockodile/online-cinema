@@ -15,15 +15,20 @@
 }
 
 .slide {
-   height: 100%;
-   width: 100%;
-   min-width: 100%;
-   max-width: 100%;
-   background-image: url("./assets/img/slider-1.webp");
    background-position: center;
    background-size: cover;
    display: flex;
    align-items: center;
+
+   &1 {
+      background-image: url("./assets/img/slider-1.webp");
+   }
+   &2 {
+      background-image: url("./assets/img/slider-2.webp");
+   }
+   &3 {
+      background-image: url("./assets/img/slider-3.webp");
+   }
 }
 
 .slideInner {
@@ -49,4 +54,11 @@
    line-height: 2.8rem;
    max-width: 55rem;
    margin-top: 1.4rem;
+}
+
+.tabList {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   width: 100%;
 }
