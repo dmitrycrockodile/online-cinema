@@ -42,23 +42,42 @@ const About = () => {
                </p>
             </div>
          </div>
-         <div className="companies">
+         <div className={styles.companies}>
             <div className={styles.companiesLinks}>
-               <a href="/">
-                  <img src={netflix} alt="Netflix" />
-               </a>
-               <a href="/">
-                  <img src={amazon} alt="Amazon" />
-               </a>
-               <a href="/">
-                  <img src={avon} alt="Avon" />
-               </a>
-               <a href="/">
-                  <img src={audioteria} alt="Audioteria" />
-               </a>
-               <a href="/">
-                  <img src={dell} alt="Dell" />
-               </a>
+               <div className="first">
+                  <a href="/">
+                     <img src={netflix} alt="Netflix" />
+                  </a>
+                  <a href="/">
+                     <img src={amazon} alt="Amazon" />
+                  </a>
+                  <a href="/">
+                     <img src={avon} alt="Avon" />
+                  </a>
+                  <a href="/">
+                     <img src={audioteria} alt="Audioteria" />
+                  </a>
+                  <a href="/">
+                     <img src={dell} alt="Dell" />
+                  </a>
+               </div>
+               <div className="second">   
+                  <a href="/">
+                     <img src={netflix} alt="Netflix" />
+                  </a>
+                  <a href="/">
+                     <img src={amazon} alt="Amazon" />
+                  </a>
+                  <a href="/">
+                     <img src={avon} alt="Avon" />
+                  </a>
+                  <a href="/">
+                     <img src={audioteria} alt="Audioteria" />
+                  </a>
+                  <a href="/">
+                     <img src={dell} alt="Dell" />
+                  </a>
+               </div>
             </div>
          </div>
       </section >

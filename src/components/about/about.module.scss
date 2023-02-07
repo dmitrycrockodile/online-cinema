@@ -1,4 +1,5 @@
 @import "../../assets/style/variables.scss";
+@import "../../assets/style/animations.scss";
 
 .about {
    padding: 16rem 0;
@@ -26,10 +27,19 @@
    }
 }
 
+.companies {
+   overflow: hidden;
+}
+
 .companiesLinks {
    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   gap: 2rem 8rem;
+   animation: scroll 15s linear infinite;
+   gap: 0 8rem;
+
+   div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem 8rem;
+   }
 }
