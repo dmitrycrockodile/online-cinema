@@ -1,9 +1,24 @@
 @keyframes scroll {
-   0% {
-     transform: translateX(0%);
-   }
-   100% {
-     transform: translateX(-105%);
-   }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-105%);
+  }
 }
- 
+
+@keyframes iconShake {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(11deg);
+  }
+  70% {
+    transform: rotate(-9deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
