@@ -21,13 +21,25 @@
    align-items: center;
 
    &1 {
-      background-image: url("./assets/img/slider-1.webp");
+      background-image: url("./assets/img/slider1-1x.webp");
+
+      @media (min-resolution: 192dpi) {
+         background-image: url("./assets/img/slider1-2x.webp");
+      }
    }
    &2 {
-      background-image: url("./assets/img/slider-2.webp");
+      background-image: url("./assets/img/slider2-1x.webp");
+
+      @media (min-resolution: 192dpi) {
+         background-image: url("./assets/img/slider2-2x.webp");
+      }
    }
    &3 {
-      background-image: url("./assets/img/slider-3.webp");
+      background-image: url("./assets/img/slider3-1x.webp");
+
+      @media (min-resolution: 192dpi) {
+         background-image: url("./assets/img/slider3-2x.webp");
+      }
    }
 }
 

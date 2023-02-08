@@ -1,4 +1,4 @@
-import film2 from "../../assets/img/film2.webp";
+import film2 from "../../assets/img/film2-2x.webp";
 
 import styles from "./filmCard.module.scss";
 
