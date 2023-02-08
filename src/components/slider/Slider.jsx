@@ -13,7 +13,7 @@ function Slider({ children }) {
    //Autoplay functionallity
    useEffect(() => {
       let slideInterval;
-      const _intervalDuration = 5000;
+      const _intervalDuration = 4000;
 
       if (isAutoplay) {
          slideInterval = setInterval(() => {

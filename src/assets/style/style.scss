@@ -44,3 +44,8 @@ button {
 	border: none;
 	cursor: pointer;
 }
+
+::selection {
+	background-color: rgba($color-orange, .8);
+	color: $color-white;
+}

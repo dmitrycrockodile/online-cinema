@@ -34,7 +34,12 @@
 
    &:hover {
       img {
-         filter: blur(10px);
+         opacity: .5;         
+
+         @supports (filter: blur(10px)) {
+            filter: blur(10px);
+            opacity: 1;
+         }
       }
 
       p {
