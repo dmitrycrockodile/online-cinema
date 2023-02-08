@@ -23,21 +23,21 @@
    &1 {
       background-image: url("./assets/img/slider1-1x.webp");
 
-      @media (min-resolution: 192dpi) {
+      @media (min-resolution: 192dpi) and (min-width: 800px) {
          background-image: url("./assets/img/slider1-2x.webp");
       }
    }
    &2 {
       background-image: url("./assets/img/slider2-1x.webp");
 
-      @media (min-resolution: 192dpi) {
+      @media (min-resolution: 192dpi) and (min-width: 800px) {
          background-image: url("./assets/img/slider2-2x.webp");
       }
    }
    &3 {
       background-image: url("./assets/img/slider3-1x.webp");
 
-      @media (min-resolution: 192dpi) {
+      @media (min-resolution: 192dpi) and (min-width: 800px) {
          background-image: url("./assets/img/slider3-2x.webp");
       }
    }
