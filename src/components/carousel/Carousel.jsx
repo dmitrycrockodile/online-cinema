@@ -29,12 +29,12 @@ function Carousel({children}) {
          {children.map((child, i) => <SwiperSlide key={i}>{child}</SwiperSlide>)}
 
          <button className='btn-next'>
-            <svg width="12" height="38" viewBox="0 0 16 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="32" height="45" viewBox="0 0 16 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M2 40L14 21L2 2" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
          </button>
          <button className='btn-prev'>
-            <svg width="12" height="38" viewBox="0 0 16 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="32" height="45" viewBox="0 0 16 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M2 40L14 21L2 2" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
          </button>

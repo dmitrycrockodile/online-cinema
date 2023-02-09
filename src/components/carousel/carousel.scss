@@ -5,10 +5,20 @@
    justify-content: center;
 }
 
+.swiper:hover {
+   .btn-next, .btn-prev {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+
 .btn-next, .btn-prev {
+   opacity: 0;
+   visibility: hidden;
    position: absolute;
    top: 28%;
    z-index: 1000;
+   transition: all .3s;
 
    path {
       transition: all .3s;
@@ -23,10 +33,10 @@
 }
 
 .btn-next {
-   right: 0;
+   right: 2%;
 }
 
 .btn-prev {
-   left: 0;
+   left: 2%;
    transform: rotate(180deg);
 }
