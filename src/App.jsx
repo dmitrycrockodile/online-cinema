@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Header from './components/header/Header';
 import Slider from './components/slider/Slider';
 import MainButton from './components/mainButton/MainButton';
@@ -10,15 +12,18 @@ import Footer from './components/footer/Footer';
 import FilmCard from './components/filmCard/FilmCard';
 
 import styles from './App.module.scss';
+import './assets/style/animations.scss';
 
 function App() {
+   const [activeSlide, setActiveSlide] = useState(1);
+
    return (
       <div className={styles.App}>
          <Header />
          <main>
             <div className={styles.banner}>
-               <Slider>
-                  <li className={`${styles.slide} ${styles.slide1}`}>
+               <Slider slideWidth={100} setActiveSlide={setActiveSlide}>
+                  <li className={`${styles.slide} ${styles.slide1} ${activeSlide === 1 ? styles.active : ''}`}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -30,12 +35,13 @@ function App() {
                            <MainButton 
                               value="Выбрать книгу"
                               size="huge"
-                              type="fullOrange"                        
+                              type="fullOrange"    
+                              style={activeSlide === 1 ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}      
                            />
                         </div>
                      </div>
                   </li>
-                  <li className={`${styles.slide} ${styles.slide2}`}>
+                  <li className={`${styles.slide} ${styles.slide2} ${activeSlide === 2 ? styles.active : ''}`}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -47,12 +53,13 @@ function App() {
                            <MainButton 
                               value="Выбрать книгу"
                               size="huge"
-                              type="fullOrange"                        
+                              type="fullOrange"                            
+                              style={activeSlide === 2 ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}   
                            />
                         </div>
                      </div>
                   </li>
-                  <li className={`${styles.slide} ${styles.slide3}`}>
+                  <li className={`${styles.slide} ${styles.slide3} ${activeSlide === 3 ? styles.active : ''}`}>
                      <div className="container">
                         <div className={styles.slideInner}>
                            <div>
@@ -65,6 +72,7 @@ function App() {
                               value="Выбрать книгу"
                               size="huge"
                               type="fullOrange"                        
+                              style={activeSlide === 3 ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}        
                            />
                         </div>
                      </div>

@@ -1,10 +1,11 @@
 @import "../../assets/style/variables.scss";
 @import "../../assets/style/mixins.scss";
+@import "../../assets/style/animations.scss";
 
 .header {
    position: absolute;
-   top: 0;
    left: 0;
+   top: -20vh;
    width: 100%;
    padding: 5rem 0;
    background: rgba($color-black, 0.9);
@@ -12,6 +13,7 @@
    font-size: 1.6rem;
    line-height: 1.8rem;
    z-index: 2;
+   animation: animatedHeader 1s .3s forwards;
 
    @include respond(tab-land) {
       padding: 4rem 0;

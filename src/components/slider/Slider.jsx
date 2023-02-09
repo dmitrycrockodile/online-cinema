@@ -1,14 +1,17 @@
-import { useState, useEffect, Children, cloneElement } from "react";
+import { useState, useEffect } from "react";
 
 import styles from "./slider.module.scss";
 
-function Slider({ children }) {
-   const [slides, setSlides] = useState([]);
+function Slider({ slideWidth, setActiveSlide, children }) {
    const [offset, setOffset] = useState(0);
    const [isAutoplay, setIsAutoplay] = useState(true);
 
-   const _slideWidth = 100;
-   const _maxOffset = (slides.length - 1) * _slideWidth;
+   const _maxOffset = (children.length - 1) * slideWidth;
+
+   //watching active slide change
+   useEffect(() => {
+      setActiveSlide(offset / 100 + 1)
+   }, [offset, setActiveSlide])
 
    //Autoplay functionallity
    useEffect(() => {
@@ -20,31 +23,16 @@ function Slider({ children }) {
             if (offset === _maxOffset) {
                setOffset(0)
             } else {
-               setOffset(offset + _slideWidth)
+               setOffset(offset + slideWidth)
             }
          },_intervalDuration)
       }
 
       return () => clearInterval(slideInterval)
-   }, [offset, isAutoplay, _maxOffset]);
-
-   //Setting slides
-   useEffect(() => {
-      setSlides(
-         Children.map(children, child => {
-            return cloneElement(child, {
-               style: {
-                  height: '100%',
-                  maxWidth: `${_slideWidth}%`,
-                  minWidth: `${_slideWidth}%`
-               }
-            })
-         })
-      )
-   }, [children])
+   }, [offset, isAutoplay, _maxOffset, slideWidth, setActiveSlide]);
 
    const onDotClick = (index) => {
-      setOffset(_slideWidth * index)
+      setOffset(slideWidth * index)
    }
 
    return (
@@ -57,7 +45,7 @@ function Slider({ children }) {
             className={styles.itemsContainer} 
             style={{transform: `translateX(${-offset}%)`}}
          >
-            {slides}
+            {children}
          </ul>
          
          <div className="container">

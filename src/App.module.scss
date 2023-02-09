@@ -1,5 +1,6 @@
 @import "./assets/style/variables.scss";
 @import "./assets/style/mixins.scss";
+@import "./assets/style/animations.scss";
 
 .App {
    position: relative;
@@ -20,21 +21,42 @@
 }
 
 .slide {
-   background-size: cover;
+   height: 100%;
+   max-width: 100%;
+   min-width: 100%;
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center;
+   background-size: cover;
    display: flex;
    align-items: center;
+   
+   &.active {
+      animation: backgroundMove 3s forwards;
+
+      .slideTitle {
+         animation: appear 1s .2s forwards;
+         opacity: 0;
+         visibility: hidden;
+      }
+
+      .slideText {
+         animation: appear 1s .5s forwards;
+         opacity: 0;
+         visibility: hidden;
+      }
+   }
 
    &1 {
       background-image: url("./assets/img/slider1-1x.webp");
+      flex-grow: 1;
 
       @media only screen and (min-resolution: 192dpi) and (min-width: 50em), (min-width: 125em) {
          background-image: url("./assets/img/slider1-2x.webp");
       }
    }
    &2 {
+      flex-grow: 1;
       background-image: url("./assets/img/slider2-1x.webp");
 
       @media only screen and (min-resolution: 192dpi) and (min-width: 50em), (min-width: 125em) {
@@ -42,6 +64,7 @@
       }
    }
    &3 {
+      flex-grow: 1;
       background-image: url("./assets/img/slider3-1x.webp");
 
       @media only screen and (min-resolution: 192dpi) and (min-width: 50em), (min-width: 125em) {

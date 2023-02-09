@@ -22,3 +22,32 @@
     transform: rotate(0deg);
   }
 }
+
+@keyframes animatedHeader {
+  0% {
+    top: -20vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: center;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(10rem);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
