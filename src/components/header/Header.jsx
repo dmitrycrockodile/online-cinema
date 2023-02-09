@@ -1,9 +1,9 @@
+import Search from "../search/Search";
+import MainButton from "../mainButton/MainButton";
+
 import logo from "../../assets/img/header-logo.svg";
 
 import styles from "./header.module.scss";
-import Search from "../search/Search";
-
-import MainButton from "../mainButton/MainButton";
 
 function Header(props) {
    return (

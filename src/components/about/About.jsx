@@ -1,10 +1,10 @@
-import styles from './about.module.scss';
-
 import netflix from '../../assets/img/netflix.webp';
 import amazon from '../../assets/img/amazon.webp';
 import avon from '../../assets/img/avon.webp';
 import audioteria from '../../assets/img/audioteria.webp';
 import dell from '../../assets/img/dell.webp';
+
+import styles from './about.module.scss';
 
 const About = () => {
    return (

@@ -1,3 +1,6 @@
+@import "../../assets/style/variables.scss";
+@import "../../assets/style/mixins.scss";
+
 .discount {
    padding: 2rem 0 20rem;
 }
@@ -5,21 +8,29 @@
 .discountInner {
    display: flex;
    align-items: center;
-   gap: 6rem;
-   border: 3px solid rgba(255, 255, 255, 0.3);
+   justify-content: space-evenly;
+   border: 3px solid rgba($color-white, 0.3);
    border-radius: 2.5rem;
    position: relative;
 }
 
 .film {
    position: relative;
-   left: -5px;
-   height: 26rem;
+   left: -7rem;
    transform: scale(1.2);
 
+   @include respond(tab-land) {
+     left: -6rem;
+   }
+
    img {
-      height: 100%;
-      border-radius: 2.5rem;
+      height: 26rem;
+      width: 26rem;
+
+      @include respond(tab-land) {
+         height: 23rem;
+         width: 23rem;
+      }
    }
 }
 
@@ -27,7 +38,7 @@
    width: 8.5rem;
    height: 8.5rem;
    border-radius: 50%;
-   background-color: #EC8F32;
+   background-color: $color-orange;
    position: absolute;
    left: 50%;
    top: 50%;
@@ -36,6 +47,12 @@
    display: inline-flex;
    justify-content: center;
    align-items: center;
+
+   @include respond(tab-land) {
+      width: 7.5rem;
+      height: 7.5rem;
+   }
+
    svg {
       width: 2.5rem;
       height: 3rem;
@@ -46,27 +63,31 @@
 
 .text {
    max-width: 55rem;
+
+   @include respond(tab-land) {
+      max-width: 43rem;
+   }
+
    h4 {
       font-size: 3.2rem;
       line-height: 6rem;
-      background: linear-gradient(266.28deg, #FFFFFF 29.05%, rgba(255, 255, 255, 0.28) 114.96%);
+      background: linear-gradient(266.28deg, $color-white 29.05%, rgba($color-white, 0.28) 114.96%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+
+      @include respond(tab-land) {
+         font-size: 3rem;
+      }
    }
 
    p {
       font-weight: 300;
       font-size: 1.8rem;
       line-height: 2.2rem;
-   }
-}
 
-.btn {
-   background: #EC8F32;
-   border-radius: 5rem;
-   padding: 2.5rem 3rem;
-   font-size: 1.8rem;
-   line-height: 2rem;
-   color: #FFFFFF;
+      @include respond(tab-land) {
+         font-size: 1.8rem;
+      }
+   }
 }

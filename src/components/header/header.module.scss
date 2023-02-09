@@ -1,4 +1,5 @@
 @import "../../assets/style/variables.scss";
+@import "../../assets/style/mixins.scss";
 
 .header {
    position: absolute;
@@ -11,6 +12,10 @@
    font-size: 1.6rem;
    line-height: 1.8rem;
    z-index: 2;
+
+   @include respond(tab-land) {
+      padding: 4rem 0;
+   }
    
    img {
       display: block;
@@ -26,15 +31,24 @@
 
 .menu {
    margin: 0 auto;
+
    ul {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem 8rem;
+
+      @include respond(tab-land) {
+         gap: 1rem 4rem;
+      }
    }
 }
 
 .search {
    margin-right: 5.5rem;
+   
+   @include respond(tab-land) {
+      margin-right: 2.5rem;
+   }
 }
 
 .user {

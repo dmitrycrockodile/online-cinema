@@ -27,7 +27,7 @@ function TabBar({children}) {
    })
 
    return (
-      <div className={styles.root}>
+      <>
          <div className={styles.navWrapper}>
             {navLinks}
          </div>
@@ -35,7 +35,7 @@ function TabBar({children}) {
          <div className={styles.content}>
             {navContent}
          </div>
-      </div>
+      </>
    );
 }
 

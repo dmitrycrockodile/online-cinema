@@ -7,9 +7,9 @@ import About from './components/about/About';
 import Discount from './components/discount/Discount';
 import Selections from './components/selections/Selections';
 import Footer from './components/footer/Footer';
+import FilmCard from './components/filmCard/FilmCard';
 
 import styles from './App.module.scss';
-import FilmCard from './components/filmCard/FilmCard';
 
 function App() {
    return (
@@ -90,47 +90,51 @@ function App() {
                      button
                   />
                </div>
-               <TabBar>
-                  <ul className={styles.tabList} label="Новинки">
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                  </ul>
+               <div className={styles.wrapper}>
+                  <TabBar>
+                     <ul className={styles.tabList} label="Новинки">
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                     </ul>
 
-                  <ul className={styles.tabList} label="Популярное">
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                  </ul>
+                     <ul className={styles.tabList} label="Популярное">
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                     </ul>
 
-                  <ul className={styles.tabList} label="Выбор редакции">
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                     <li><FilmCard /></li>
-                  </ul>
-               </TabBar>
-               <Selections />
+                     <ul className={styles.tabList} label="Выбор редакции">
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
+                     </ul>
+                  </TabBar>
+               </div>
+               <div className={styles.wrapper}>
+                  <Selections />
+               </div>
                <About />
                <Discount />
             </div>

@@ -1,13 +1,14 @@
 @import "../../assets/style/variables.scss";
-
-.selections {
-   margin-top: 12rem;
-}
+@import "../../assets/style/mixins.scss";
 
 .selectionsInner {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 3rem;
+
+   @include respond(tab-land) {
+      gap: 1rem;
+   }
 }
 
 .selectionsTitle {
@@ -15,8 +16,12 @@
    font-size: 3.2rem;
    line-height: 3.7rem;
    color: $color-white;
-   
    margin-bottom: 2rem;
+
+   @include respond(tab-land) {
+      margin-bottom: 4rem;
+      font-size: 3rem;
+   }
 }
 
 .item {
@@ -25,6 +30,11 @@
    overflow: hidden;
    width: 27.3rem;
    height: 16.3rem;
+
+   @include respond(tab-land) {
+      width: 24rem;
+      height: 14.3rem;
+   }
 
    img {
       transition: all .4s;
@@ -58,5 +68,9 @@
       transition: all .3s ease;
       font-weight: 700;
       font-size: 2.4rem;
+
+      @include respond(tab-land) {
+         font-size: 2rem;
+      }
    }
 }

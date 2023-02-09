@@ -1,5 +1,6 @@
 import MainButton from "../mainButton/MainButton";
 import FilmCard from "../filmCard/FilmCard";
+import MultiCarousel from "../carousel/Carousel";
 
 import styles from "./filmList.module.scss";
 
@@ -15,11 +16,15 @@ function FilmList({title, button = false}) {
             />}
          </div>
          <div className={styles.list}>
-            <FilmCard />
-            <FilmCard />
-            <FilmCard />
-            <FilmCard />
-            <FilmCard />
+            <MultiCarousel>
+               <FilmCard />
+               <FilmCard />
+               <FilmCard />
+               <FilmCard />
+               <FilmCard />
+               <FilmCard />
+               <FilmCard />
+            </MultiCarousel>
          </div>
       </div>   
    );

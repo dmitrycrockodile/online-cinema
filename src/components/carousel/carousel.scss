@@ -1,0 +1,32 @@
+@import "../../assets/style/variables.scss";
+
+.swiper-slide {
+   display: flex;
+   justify-content: center;
+}
+
+.btn-next, .btn-prev {
+   position: absolute;
+   top: 28%;
+   z-index: 1000;
+
+   path {
+      transition: all .3s;
+   }
+
+   &:disabled {
+     path {
+      stroke: $color-gray-2;
+      opacity: .8;
+     }
+   }
+}
+
+.btn-next {
+   right: 0;
+}
+
+.btn-prev {
+   left: 0;
+   transform: rotate(180deg);
+}

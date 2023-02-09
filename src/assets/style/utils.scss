@@ -1,11 +1,16 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .container {
   max-width: 123rem;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 1.5rem;
   margin: 0 auto;
   position: relative;
+
+  @include respond(tab-land) {
+    padding: 0 5rem;
+  }
 }
 
 .underlined {
