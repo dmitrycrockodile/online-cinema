@@ -9,17 +9,14 @@
 }
 
 @keyframes iconShake {
-  0% {
+  0%, 100% {
     transform: rotate(0deg);
   }
   30% {
-    transform: rotate(11deg);
+    transform: rotate(9deg);
   }
   70% {
-    transform: rotate(-9deg);
-  }
-  100% {
-    transform: rotate(0deg);
+    transform: rotate(-7deg);
   }
 }
 
@@ -49,5 +46,19 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(.6);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
   }
 }

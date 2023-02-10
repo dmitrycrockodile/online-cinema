@@ -1,11 +1,11 @@
-import film2 from "../../assets/img/film2-2x.webp";
+import film from "../../assets/img/film2-2x.webp";
 
 import styles from "./filmCard.module.scss";
 
 function FilmCard({src, title = "Не твоя Людмила", author = "Линкольн Чайлд", adult}) {
    return (
       <a href="/" className={styles.card}>
-         <img className={styles.img} src={film2} alt={title} />
+         <img className={styles.img} src={film} alt={title} />
          <div className={styles.play}>
             <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M13.7996 9.00001L0.599609 0.200012V17.8L13.7996 9.00001Z" fill="#0D111A"/>
