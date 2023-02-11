@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
+import MovieService from "../../services/MovieService";
+
 import MainButton from "../mainButton/MainButton";
 import FilmCard from "../filmCard/FilmCard";
 import Carousel from "../carousel/Carousel";
 
 import styles from "./filmList.module.scss";
 
-function FilmList({title, button = false}) {
+const movieService = new MovieService();
+
+function FilmList({title, button = false, groupName = 'popular'}) {
+   const [movies, setMovies] = useState([]);
+
+   useEffect(() => {
+      movieService.getMovieGroup(groupName).then(res => setMovies(res))
+   }, [groupName])
+
    return (
       <div className={styles.root}>
          <div className={styles.info}>
@@ -18,13 +29,16 @@ function FilmList({title, button = false}) {
          
          <div className={styles.list}>
             <Carousel>
-               <FilmCard />
-               <FilmCard />
-               <FilmCard />
-               <FilmCard />
-               <FilmCard />
-               <FilmCard />
-               <FilmCard />
+               {movies.slice(0, 10).map(movie => {
+                  const {adult, highQualityImg, id, lowQualityImg, title, date} = movie;
+
+                  return (<FilmCard 
+                           imageSources={[lowQualityImg, highQualityImg]} 
+                           title={title}
+                           date={date}
+                           adult={adult} 
+                           key={id} />)
+               })}
             </Carousel>
          </div>
       </div>   

@@ -1,16 +1,26 @@
-import MainButton from '../mainButton/MainButton';
+import { useState, useEffect } from 'react';
+import MovieService from '../../services/MovieService';
 
-import filmImg1x from '../../assets/img/film2-1x.webp';
-import filmImg2x from '../../assets/img/film2-2x.webp';
+import MainButton from '../mainButton/MainButton';
 
 import styles from './discount.module.scss';
 
+const movieService = new MovieService();
+
 const Discount = () => {
+   const [movie, setMovie] = useState({});
+
+   useEffect(() => {
+      movieService.getTopMovie().then(res => setMovie(res))
+   }, [])
+
+   const {highQualityImg, lowQualityImg, title, description} = movie;
+
    return (
       <div className={styles.discount}>
          <div className={styles.discountInner}>
             <div className={styles.film}>
-               <img srcSet={`${filmImg1x} 1x, ${filmImg2x} 2x`} alt="Film" />
+               <img srcSet={`${lowQualityImg} 1x, ${highQualityImg} 2x`} alt={title} />
                <div className={styles.playBtn}>
                   <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M13.7996 9.00001L0.599609 0.200012V17.8L13.7996 9.00001Z" fill="#fff" />
@@ -18,11 +28,11 @@ const Discount = () => {
                </div>
             </div>
             <div className={styles.text}>
-               <h4>Eжедневное преимущество!</h4>
-               <p>Даже полтора часа в день (в среднем столько занимает время на дорогу в мегаполисе на работу и домой), посвященных аудиочтению!</p>
+               <h4>{title}!</h4>
+               <p>{description}</p>
             </div>
             <MainButton
-               value="Получить скидку"
+               value="Смотреть онлайн"
                size="big"
                type="fullOrange"
             />
