@@ -116,6 +116,7 @@
       width: 2.2rem;
       height: 1.9rem;
       transition: all .2s;
+      fill: transparent;
 
       &.liked {
          fill: $color-orange;
