@@ -1,6 +1,9 @@
+import film1x from '../../assets/img/film2-1x.webp';
+import film2x from '../../assets/img/film2-2x.webp';
+
 import styles from "./filmCard.module.scss";
 
-function FilmCard({imageSources, title, date, adult}) {
+function FilmCard({imageSources = [film1x, film2x], title = 'Не твоя Людмила', date = '09.07.2004', adult = true}) {
    return (
       <a href="/" className={styles.card}>
          <img className={styles.img} srcSet={`${imageSources[0]} 1x, ${imageSources[1]} 2x`} alt={title} />

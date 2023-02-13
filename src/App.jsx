@@ -6,7 +6,7 @@ import About from './components/about/About';
 import Discount from './components/discount/Discount';
 import Selections from './components/selections/Selections';
 import Footer from './components/footer/Footer';
-// import FilmCard from './components/filmCard/FilmCard';
+import FilmCard from './components/filmCard/FilmCard';
 
 import styles from './App.module.scss';
 
@@ -41,7 +41,6 @@ function App() {
                <div className={styles.wrapper}>
                   <TabBar>
                      <ul className={styles.tabList} label="Новинки">
-                        {/* <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
@@ -50,11 +49,11 @@ function App() {
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
-                        <li><FilmCard /></li> */}
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
                      </ul>
 
                      <ul className={styles.tabList} label="Популярное">
-                        {/* <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
@@ -63,11 +62,11 @@ function App() {
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
-                        <li><FilmCard /></li> */}
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
                      </ul>
 
                      <ul className={styles.tabList} label="Выбор редакции">
-                        {/* <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
@@ -76,7 +75,8 @@ function App() {
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
                         <li><FilmCard /></li>
-                        <li><FilmCard /></li> */}
+                        <li><FilmCard /></li>
+                        <li><FilmCard /></li>
                      </ul>
                   </TabBar>
                </div>

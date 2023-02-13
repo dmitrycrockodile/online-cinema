@@ -11,8 +11,16 @@ const Discount = () => {
    const [movie, setMovie] = useState({});
 
    useEffect(() => {
-      movieService.getTopMovie().then(res => setMovie(res))
+      updateMovie()
    }, [])
+
+   const onMovieLoaded = (movie) => {
+      setMovie(movie)
+   }
+
+   const updateMovie = () => {
+      movieService.getTopMovie().then(onMovieLoaded)
+   }
 
    const {highQualityImg, lowQualityImg, title, description} = movie;
 
@@ -28,7 +36,7 @@ const Discount = () => {
                </div>
             </div>
             <div className={styles.text}>
-               <h4>{title}!</h4>
+               <h4>{title}</h4>
                <p>{description}</p>
             </div>
             <MainButton
