@@ -5,6 +5,7 @@ import MainButton from "../mainButton/MainButton";
 import FilmCard from "../filmCard/FilmCard";
 import Carousel from "../carousel/Carousel";
 import Skeleton from "../skeleton/Skeleton";
+import ErrorMessage from "../errorMessage/ErrorMessage";
 
 import styles from "./filmList.module.scss";
 
@@ -13,9 +14,10 @@ const movieService = new MovieService();
 function FilmList({title, button = false, groupName = 'popular'}) {
    const [movies, setMovies] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
+   const [error, setError] = useState(false);
 
    useEffect(() => {
-      movieService.getMovieGroup(groupName).then(onMoviesLoaded)
+      movieService.getMovieGroup(groupName).then(onMoviesLoaded).catch(onError)
    }, [groupName])
 
    const onMoviesLoaded = (movies) => {
@@ -23,7 +25,12 @@ function FilmList({title, button = false, groupName = 'popular'}) {
       setIsLoading(false)
    }
 
-   const moviesList = movies.slice(0, 10).map(movie => {
+   const onError = () => {
+      setIsLoading(false)
+      setError(true)
+   }
+
+   const items = movies.slice(0, 10).map(movie => {
       const {adult, highQualityImg, id, lowQualityImg, title, date} = movie;
 
       return (<FilmCard 
@@ -32,7 +39,7 @@ function FilmList({title, button = false, groupName = 'popular'}) {
                date={date}
                adult={adult} 
                key={id} />)
-   })
+   });
 
    const skeletons = [...new Array(5)].map((_, index) => <Skeleton key={index} />);
 
@@ -48,11 +55,12 @@ function FilmList({title, button = false, groupName = 'popular'}) {
          </div>
          
          <div className={styles.list}>
-            <Carousel>
-               {isLoading
-                  ? skeletons
-                  : moviesList}
-            </Carousel>
+            {error 
+               ? <ErrorMessage />
+               : <Carousel>
+                  {isLoading ? skeletons : items}
+               </Carousel>
+            }
          </div>
       </div>   
    );

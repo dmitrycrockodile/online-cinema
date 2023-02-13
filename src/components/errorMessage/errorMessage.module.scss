@@ -1,0 +1,21 @@
+@import "../../assets/style/variables.scss";
+
+.root {
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   padding: 3rem 0;
+}
+
+.icon {
+   width: 8rem;
+   height: 8rem;
+   fill: $color-gray-1;
+}
+
+.text {
+   font-weight: 500;
+   font-size: 2.1rem;
+   line-height: 2.4rem;
+   margin-left: 3rem;
+}
