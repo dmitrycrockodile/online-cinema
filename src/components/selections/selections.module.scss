@@ -51,8 +51,9 @@
       }
 
       p {
-         left: 25%;
+         left: 50%;
          bottom: 50%;
+         transform: translateX(-50%);
          transition: all .3s ease;
       }
    }

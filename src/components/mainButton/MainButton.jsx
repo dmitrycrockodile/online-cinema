@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'; 
+
 import styles from "./mainButton.module.scss";
 
 function MainButton({value, size = "medium", type = "fullOrange", border, color, style}) {
@@ -9,6 +11,15 @@ function MainButton({value, size = "medium", type = "fullOrange", border, color,
          {value}
       </button>
    );
+}
+
+MainButton.propTypes = {
+   value: PropTypes.string,
+   size: PropTypes.string,
+   type: PropTypes.string,
+   border: PropTypes.string,
+   color: PropTypes.string,
+   style: PropTypes.object
 }
 
 export default MainButton;

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types'; 
 
 import styles from "./slider.module.scss";
 
@@ -61,6 +62,12 @@ function Slider({ slideWidth, setActiveSlide, children }) {
          </div>
       </div>
    );
+}
+
+Slider.propTypes = {
+   slideWidth: PropTypes.number,
+   setActiveSlide: PropTypes.func,
+   children: PropTypes.array
 }
 
 export default Slider;

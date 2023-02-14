@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'; 
+
 import film1x from '../../assets/img/film2-1x.webp';
 import film2x from '../../assets/img/film2-2x.webp';
 
@@ -24,6 +26,13 @@ function FilmCard({imageSources = [film1x, film2x], title = 'Не твоя Лю�
          </div>
       </a>
    );
+}
+
+FilmCard.propTypes = {
+   imageSources: PropTypes.arrayOf(PropTypes.string),
+   title: PropTypes.string,
+   date: PropTypes.string,
+   adult: PropTypes.bool
 }
 
 export default FilmCard;

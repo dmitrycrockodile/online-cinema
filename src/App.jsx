@@ -7,6 +7,7 @@ import Discount from './components/discount/Discount';
 import Selections from './components/selections/Selections';
 import Footer from './components/footer/Footer';
 import FilmCard from './components/filmCard/FilmCard';
+import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 
 import styles from './App.module.scss';
 
@@ -18,27 +19,34 @@ function App() {
             <Banner />
             <div className="container">
                <div className={styles.wrapper}>
-                  <FilmList 
-                     title="Скоро в кино"
-                     button
-                     groupName="upcoming"
-                  />
+                  <ErrorBoundary>
+                     <FilmList 
+                        title="Скоро в кино"
+                        button
+                        groupName="upcoming"
+                     />
+                  </ErrorBoundary>
                </div>
                <div className={styles.wrapper}>
-                  <FilmList 
-                     title="Популярное"
-                     button
-                     groupName="popular"
-                  />
+                  <ErrorBoundary>
+                     <FilmList 
+                        title="Популярное"
+                        button
+                        groupName="popular"
+                     />
+                  </ErrorBoundary>
                </div>
                <div className={styles.wrapper}>
-                  <FilmList 
-                     title="Выбор редакции"
-                     button
-                     groupName="top_rated"
-                  />
+                  <ErrorBoundary>
+                     <FilmList 
+                        title="Выбор редакции"
+                        button
+                        groupName="top_rated"
+                     />
+                  </ErrorBoundary>
                </div>
                <div className={styles.wrapper}>
+               <ErrorBoundary>
                   <TabBar>
                      <ul className={styles.tabList} label="Новинки">
                         <li><FilmCard /></li>
@@ -79,12 +87,15 @@ function App() {
                         <li><FilmCard /></li>
                      </ul>
                   </TabBar>
+               </ErrorBoundary>
                </div>
                <div className={styles.wrapper}>
                   <Selections />
                </div>
                <About />
-               <Discount />
+               <ErrorBoundary>
+                  <Discount />
+               </ErrorBoundary>
             </div>
          </main>
          <Footer />

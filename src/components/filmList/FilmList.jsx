@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieService from "../../services/MovieService";
+import PropTypes from 'prop-types'; 
 
 import MainButton from "../mainButton/MainButton";
 import FilmCard from "../filmCard/FilmCard";
@@ -64,6 +65,12 @@ function FilmList({title, button = false, groupName = 'popular'}) {
          </div>
       </div>   
    );
+}
+
+FilmList.propTypes = {
+   title: PropTypes.string,
+   button: PropTypes.bool,
+   groupName: PropTypes.string
 }
 
 export default FilmList;
