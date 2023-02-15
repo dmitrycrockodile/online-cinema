@@ -17,6 +17,7 @@ function Categories({categories = []}) {
    const [error, setError] = useState(false);
 
    useEffect(() => {
+      setIsLoading(true);
       movieService.getMovieGroup(activeCategory).then(onMoviesLoaded).catch(onError)
    }, [activeCategory])
 
