@@ -14,15 +14,3 @@
       margin-top: 8rem;
    }
 }
-
-.tabList {
-   display: grid;
-   grid-template-columns: repeat(5, 21.2rem);
-   grid-row-gap: 6rem;
-   justify-content: space-between;
-   width: 100%;
-
-   @include respond(tab-land) {
-      grid-template-columns: repeat(4, 21.2rem);
-   }
-}

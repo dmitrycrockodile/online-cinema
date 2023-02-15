@@ -16,7 +16,7 @@ function FilmList({title, button = false, groupName = 'popular'}) {
    const [movies, setMovies] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
    const [error, setError] = useState(false);
-
+   
    useEffect(() => {
       movieService.getMovieGroup(groupName).then(onMoviesLoaded).catch(onError)
    }, [groupName])
