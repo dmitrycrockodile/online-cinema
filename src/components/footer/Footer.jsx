@@ -2,7 +2,7 @@ import logo from "../../assets/img/footer-logo.svg";
 
 import styles from "./footer.module.scss";
 
-function Footer() {
+const Footer = () => {
    return (
       <footer className={styles.footer}>
          <div className="container">

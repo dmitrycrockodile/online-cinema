@@ -10,7 +10,7 @@ import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 
 import styles from './App.module.scss';
 
-function App() {
+const App = () => {
    return (
       <div className={styles.App}>
          <Header />

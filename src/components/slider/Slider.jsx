@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from "./slider.module.scss";
 
-function Slider({ slideWidth, setActiveSlide, children }) {
+const Slider = ({ slideWidth, setActiveSlide, children }) => {
    const [offset, setOffset] = useState(0);
    const [isAutoplay, setIsAutoplay] = useState(true);
 

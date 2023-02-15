@@ -12,7 +12,11 @@ import styles from "./filmList.module.scss";
 
 const movieService = new MovieService();
 
-function FilmList({title, button = false, groupName = 'popular'}) {
+const FilmList = ({
+   title, 
+   button = false, 
+   groupName = 'popular'
+}) => {
    const [movies, setMovies] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
    const [error, setError] = useState(false);

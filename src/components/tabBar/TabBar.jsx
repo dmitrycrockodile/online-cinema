@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import styles from "./tabBar.module.scss";
 
-function TabBar({children}) {
+const TabBar = ({children}) => {
    const [activeTab, setActiveTab] = useState(children[0].props.label);
 
    const navLinks = children.map(tab => {

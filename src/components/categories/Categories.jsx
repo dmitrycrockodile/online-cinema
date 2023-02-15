@@ -10,7 +10,7 @@ import styles from './categories.module.scss';
 
 const movieService = new MovieService();
 
-function Categories({categories = []}) {
+const Categories = ({categories = []}) => {
    const [activeCategory, setActiveCategory] = useState(categories[0].name);
    const [movies, setMovies] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +18,7 @@ function Categories({categories = []}) {
 
    useEffect(() => {
       setIsLoading(true);
-      movieService.getMovieGroup(activeCategory).then(onMoviesLoaded).catch(onError)
+      movieService.getMovieGroup(activeCategory).then(res => onMoviesLoaded(res.slice(10, 20))).catch(onError)
    }, [activeCategory])
 
    const onMoviesLoaded = (movies) => {
@@ -31,7 +31,7 @@ function Categories({categories = []}) {
       setError(true)
    }
 
-   const items = movies.slice(10, 20).map(movie => {
+   const items = movies.map(movie => {
       const {adult, highQualityImg, id, lowQualityImg, title, date} = movie;
 
       return (<FilmCard 

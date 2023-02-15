@@ -5,7 +5,7 @@ import 'swiper/css';
 import './carousel.scss';
 import 'swiper/css/navigation';
 
-function Carousel({children}) {
+const Carousel = ({children}) => {
    return (
       <Swiper
          navigation={{

@@ -5,7 +5,7 @@ import logo from "../../assets/img/header-logo.svg";
 
 import styles from "./header.module.scss";
 
-function Header() {
+const Header = () => {
    return (
       <div className={styles.header}>
          <div className="container">

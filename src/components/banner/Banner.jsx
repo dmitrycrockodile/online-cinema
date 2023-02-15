@@ -6,7 +6,7 @@ import Slider from '../slider/Slider';
 import styles from './banner.module.scss';
 import '../../assets/style/animations.scss';
 
-function Banner() {
+const Banner = () => {
    const [activeSlide, setActiveSlide] = useState(1);
 
    return (

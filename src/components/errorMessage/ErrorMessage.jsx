@@ -1,6 +1,6 @@
 import styles from './errorMessage.module.scss';
 
-function ErrorMessage() {
+const ErrorMessage = () => {
    return (
       <div className={styles.root}>
         <svg className={styles.icon} version="1.1" viewBox="0 0 499.973 391.157" xmlns="http://www.w3.org/2000/svg">
