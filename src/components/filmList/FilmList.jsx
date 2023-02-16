@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MovieService from "../../services/MovieService";
+import useMovieService from "../../services/MovieService";
 import PropTypes from 'prop-types'; 
 
 import MainButton from "../mainButton/MainButton";
@@ -10,7 +10,6 @@ import ErrorMessage from "../errorMessage/ErrorMessage";
 
 import styles from "./filmList.module.scss";
 
-const movieService = new MovieService();
 
 const FilmList = ({
    title, 
@@ -18,21 +17,15 @@ const FilmList = ({
    groupName = 'popular'
 }) => {
    const [movies, setMovies] = useState([]);
-   const [isLoading, setIsLoading] = useState(true);
-   const [error, setError] = useState(false);
    
+   const {getMovieGroup, isLoading, error} = useMovieService();
+
    useEffect(() => {
-      movieService.getMovieGroup(groupName).then(onMoviesLoaded).catch(onError)
+      getMovieGroup(groupName).then(onMoviesLoaded);
    }, [groupName])
 
    const onMoviesLoaded = (movies) => {
       setMovies(movies)
-      setIsLoading(false)
-   }
-
-   const onError = () => {
-      setIsLoading(false)
-      setError(true)
    }
 
    const items = movies.slice(0, 10).map(movie => {
@@ -43,7 +36,7 @@ const FilmList = ({
                title={title}
                date={date}
                adult={adult} 
-               key={id} />)
+               key={id}/>)
    });
 
    const skeletons = [...new Array(5)].map((_, index) => <Skeleton key={index} />);

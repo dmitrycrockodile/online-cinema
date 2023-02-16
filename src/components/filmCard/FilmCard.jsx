@@ -9,8 +9,9 @@ const FilmCard = ({
    imageSources = [film1x, film2x],
    title = "Не твоя Людмила",
    date = "09.07.2004",
-   adult = true,
+   adult = true
 }) => {
+
    return (
       <a href="/" className={styles.card}>
          <img

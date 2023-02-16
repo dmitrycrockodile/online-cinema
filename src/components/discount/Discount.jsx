@@ -1,25 +1,22 @@
 import { useState, useEffect } from 'react';
-import MovieService from '../../services/MovieService';
+import useMovieService from '../../services/MovieService';
 
 import MainButton from '../mainButton/MainButton';
 
 import styles from './discount.module.scss';
 
-const movieService = new MovieService();
 
 const Discount = () => {
    const [movie, setMovie] = useState({});
+   
+   const { getTopMovie } = useMovieService();
 
    useEffect(() => {
-      updateMovie()
+      getTopMovie().then(onMovieLoaded)
    }, [])
 
    const onMovieLoaded = (movie) => {
       setMovie(movie)
-   }
-
-   const updateMovie = () => {
-      movieService.getTopMovie().then(onMovieLoaded)
    }
 
    const {highQualityImg, lowQualityImg, title, description} = movie;

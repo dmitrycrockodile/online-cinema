@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import MovieService from '../../services/MovieService';
+import useMovieService from '../../services/MovieService';
 import PropTypes from 'prop-types'; 
 
 import FilmCard from '../filmCard/FilmCard';
@@ -8,27 +8,19 @@ import ErrorMessage from "../errorMessage/ErrorMessage";
 
 import styles from './categories.module.scss';
 
-const movieService = new MovieService();
 
 const Categories = ({categories = []}) => {
    const [activeCategory, setActiveCategory] = useState(categories[0].name);
    const [movies, setMovies] = useState([]);
-   const [isLoading, setIsLoading] = useState(true);
-   const [error, setError] = useState(false);
+   
+   const {getMovieGroup, error, isLoading} = useMovieService();
 
    useEffect(() => {
-      setIsLoading(true);
-      movieService.getMovieGroup(activeCategory).then(res => onMoviesLoaded(res.slice(10, 20))).catch(onError)
+      getMovieGroup(activeCategory).then(onMoviesLoaded)
    }, [activeCategory])
 
    const onMoviesLoaded = (movies) => {
-      setMovies(movies)
-      setIsLoading(false)
-   }
-
-   const onError = () => {
-      setIsLoading(false)
-      setError(true)
+      setMovies(movies.slice(10, 20))
    }
 
    const items = movies.map(movie => {
@@ -39,7 +31,7 @@ const Categories = ({categories = []}) => {
                title={title}
                date={date}
                adult={adult} 
-               key={id} />)
+               key={id}/>)
    });
 
    const skeletons = [...new Array(10)].map((_, index) => <Skeleton key={index} />);
@@ -47,7 +39,7 @@ const Categories = ({categories = []}) => {
    return (
       <div className="categories">
          <ul>
-            {categories.map((item, i) => {
+            {categories.map(item => {
                return (
                   <li  
                      className={activeCategory === item.name ? `${styles.nav} ${styles.active}` : styles.nav} 
