@@ -1,21 +1,42 @@
 @import "../../assets/style/variables.scss";
+@import "../../assets/style/animations.scss";
 
 .search {
    position: relative;
-   width: 100%;
-   display: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-right: 3rem;
+   width: 5rem;
+
+   &.active {
+      padding: .5rem 1rem .5rem 2.5rem;
+      border: 2px solid $color-white;
+      border-radius: $main-border;
+      width: 51rem;
+
+      .searchInput {
+         width: 100%;
+         opacity: 1;
+         visibility: visible;
+      }
+   }
 }
 
 .searchInput {
-   width: 100%;
-   padding: 1rem 5rem 1rem 2.5rem;
-   background-color: transparent;
-   border: 2px solid $color-white;
-   border-radius: $main-border;
+   width: 0;
+   opacity: 0;
+   visibility: hidden;
    font-weight: 300;
    font-size: 1.4rem;
    line-height: 1.6rem;
    color: $color-white;
+   background-color: transparent;
+   border: none;
+
+   &:focus {
+      outline: none;
+   }
    
    &::placeholder {
       color: $color-white;
@@ -25,8 +46,11 @@
 }
 
 .searchBtn {
-   position: absolute;
-   right: 2rem;
-   top: 50%;
-   transform: translateY(-50%);
+   margin-top: .3rem;
+   padding-left: 0.5rem;
+   transition: transform .3s;
+
+   &:hover {
+      transform: rotate(20deg);
+   }
 }

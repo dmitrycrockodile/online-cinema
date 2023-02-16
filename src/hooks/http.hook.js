@@ -9,26 +9,21 @@ export const useHttp = () => {
 
       try {
          const res = await fetch(url);
-
-         if (!res.ok) {
-            throw new Error(`Could not fetch ${url}, status - ${res.status}`);
-         }
-
          const data = await res.json();
+
+         if(!res.ok) {
+            throw new Error(`Couldn't fetch ${url}, status: ${res.status}`);
+         }
 
          setIsLoading(false);
 
          return data;
       } catch (error) {
-         setIsLoading(false);
+         setIsLoading(false)
          setError(error.message);
-         throw(error);
+         throw error;
       }
    }, []);
 
-   const clearError = useCallback(() => {
-      setError(null);
-   }, []);
-
-   return {isLoading, request, error, clearError};
+   return { isLoading, error, request };
 }

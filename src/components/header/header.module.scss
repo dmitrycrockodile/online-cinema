@@ -34,6 +34,10 @@
 .menu {
    margin: 0 auto;
 
+   &.hidden {
+      display: none;
+   }
+
    ul {
       display: flex;
       flex-wrap: wrap;
@@ -42,14 +46,6 @@
       @include respond(tab-land) {
          gap: 1rem 4rem;
       }
-   }
-}
-
-.search {
-   margin-right: 5.5rem;
-   
-   @include respond(tab-land) {
-      margin-right: 2.5rem;
    }
 }
 
