@@ -14,6 +14,7 @@
       border: 2px solid $color-white;
       border-radius: $main-border;
       width: 51rem;
+      margin-right: 0;
 
       .searchInput {
          width: 100%;
@@ -52,5 +53,61 @@
 
    &:hover {
       transform: rotate(20deg);
+   }
+}
+
+.list {
+   position: absolute;
+   top: 103%;
+   left: 0;
+   right: 0;
+   border-radius: 1rem;
+   background-color: rgba($color-black, .8);
+   max-height: 30rem;
+   overflow: scroll;
+}
+
+.item {
+   min-height: 10rem;
+   width: 100%;
+   display: flex;
+   cursor: pointer;
+   padding-right: 2rem;
+   transition: all .3s;
+
+   &:hover {
+      background-color: rgba($color-blue, .2);
+   }
+
+   &:not(:first-child) {
+      margin-top: 1rem;
+   }
+
+   img {
+      height: 100%;
+      width: 7rem;
+      align-self: center;
+   }
+
+   .info {
+      margin-left: 2rem;
+      margin-top: 2rem;
+
+      h3 {
+         font-size: 1.7rem;
+         opacity: .9;
+      }
+   
+      p {
+         font-size: 1.3rem;
+         margin-top: .5rem;
+         opacity: .9;
+      }
+
+      span {
+         font-weight: 300;
+         font-size: 1.2rem;
+         color: $color-gray-2;
+      }
    }
 }
