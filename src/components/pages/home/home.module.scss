@@ -1,0 +1,9 @@
+@import "../../../assets/style/mixins.scss";
+
+.wrapper {
+   margin-top: 9.7rem;
+
+   @include respond(tab-land) {
+      margin-top: 8rem;
+   }
+}
