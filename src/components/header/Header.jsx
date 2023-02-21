@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Search from "../search/Search";
 import MainButton from "../mainButton/MainButton";
@@ -14,9 +15,9 @@ const Header = () => {
       <div className={styles.header}>
          <div className="container">
             <div className={styles.headerInner}>
-               <a href="/">
+               <Link to="/">
                   <img src={logo} alt="Our logo" />
-               </a>
+               </Link>
                <nav className={activeSearch ? `${styles.menu} ${styles.hidden}` : styles.menu}>
                   <ul>
                      <li>

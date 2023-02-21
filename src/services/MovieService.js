@@ -24,19 +24,26 @@ const useMovieService = () => {
       return res.results.map(_transformMovie);
    }
 
+   const getMovie = async (id) => {
+      const res = await request(`${_apiBase}movie/${id}?api_key=${_apikey}&language=en-US`);
+      return _transformMovie(res);
+   }
+
    const _transformMovie = (movie) => {
       return {
          adult: movie.adult,
          id: movie.id,
          title: movie.title,
-         description: `${movie.overview.slice(0, 200)}...`,
+         description: movie.overview,
          highQualityImg: `${_apiImgLink}w500/${movie.poster_path}`,
          lowQualityImg: `${_apiImgLink}w300/${movie.poster_path}`,
          date: movie.release_date,
+         rating: `${Math.round(movie.vote_average * 10) / 10}`.replace(/\./, ','),
+         voteCount: movie.vote_count
       }
    }
 
-   return {isLoading, error, getMovieGroup, getTopMovie, getMoviesByName};
+   return {isLoading, error, getMovieGroup, getTopMovie, getMoviesByName, getMovie};
 }
 
 export default useMovieService;

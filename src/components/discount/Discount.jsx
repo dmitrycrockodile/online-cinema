@@ -20,6 +20,7 @@ const Discount = () => {
    }
 
    const {highQualityImg, lowQualityImg, title, description} = movie;
+   const formattedDescription = description && description.length > 245 ? `${description.slice(0, 245).trim()}...` : description;
 
    return (
       <div className={styles.discount}>
@@ -34,7 +35,7 @@ const Discount = () => {
             </div>
             <div className={styles.text}>
                <h4>{title}</h4>
-               <p>{description}</p>
+               <p>{formattedDescription}</p>
             </div>
             <MainButton
                value="Смотреть онлайн"

@@ -7,8 +7,10 @@
    color: $color-white;
    transition: all .2s ease-in;
    position: relative;
-   z-index: 10;
+   z-index: 100;
    font-weight: 700;
+   display: block;
+   position: relative;
 }
 
 //SIZES
@@ -32,6 +34,11 @@
       padding: 2rem 3rem;
       font-size: 1.6rem;
    }
+}
+
+.mediumBig {
+   padding: 1.8rem 3rem;
+   font-size: 1.6rem;
 }
 
 .medium {
@@ -75,6 +82,7 @@
 
 .transparent {
    background-color: transparent;
+   overflow: hidden;
 }
 
 //BORDERS
@@ -93,6 +101,44 @@
 
 .orangeBorder {
    border: 2px solid $color-orange;
+   transition: color .5s;
+
+   span {
+      position: absolute;
+      width: 20%;
+      height: 90%;
+      background-color: $color-orange;
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      transition: 0.5s;
+      transition-delay: calc((var(--n) - 1) * 0.1s);
+      z-index: -1;
+   }
+
+   &:hover {
+      color: $color-black;
+   }
+
+   &:hover span {
+      transform: translateY(0) scale(2);
+   }
+
+   span:nth-child(1) {
+      --n: 1;
+   }  
+
+   span:nth-child(2) {
+      --n: 2;
+   }
+
+   span:nth-child(3) {
+      --n: 3;
+   }
+
+   span:nth-child(4) {
+      --n: 4;
+   }
 }
 
 //COLORS

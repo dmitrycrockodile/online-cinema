@@ -10,7 +10,7 @@ import styles from './home.module.scss';
 
 const Home = () => {
    return (
-      <main>
+      <>
          <Banner />
          <div className="container">
             <div className={styles.wrapper}>
@@ -59,7 +59,7 @@ const Home = () => {
                <Discount />
             </ErrorBoundary>
          </div> 
-      </main>
+      </>
    );
 }
 

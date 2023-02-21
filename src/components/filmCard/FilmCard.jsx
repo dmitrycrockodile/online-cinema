@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import film1x from "../../assets/img/film2-1x.webp";
 import film2x from "../../assets/img/film2-2x.webp";
@@ -9,11 +10,12 @@ const FilmCard = ({
    imageSources = [film1x, film2x],
    title = "Не твоя Людмила",
    date = "09.07.2004",
-   adult = true
+   adult = true,
+   id
 }) => {
 
    return (
-      <a href="/" className={styles.card}>
+      <Link to={`/films/${id}`} className={styles.card}>
          <img
             className={styles.img}
             srcSet={`${imageSources[0]} 1x, ${imageSources[1]} 2x`}
@@ -48,7 +50,7 @@ const FilmCard = ({
                </svg>
             </div>
          </div>
-      </a>
+      </Link>
    );
 };
 

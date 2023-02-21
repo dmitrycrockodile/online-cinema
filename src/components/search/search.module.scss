@@ -75,6 +75,10 @@
    padding-right: 2rem;
    transition: all .3s;
 
+   :not(:first-child) {
+      margin-bottom: .6rem;
+   }
+
    &:hover {
       background-color: rgba($color-blue, .2);
    }

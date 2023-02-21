@@ -18,6 +18,7 @@ const MainButton = ({
          style={{...style}} 
          className={`${styles.btn} ${styles[size]} ${styles[type]} ${borderClass} ${colorClass}`}>
          {value}
+         {border === "orangeBorder"  ? <><span></span><span></span><span></span><span></span></> : ''}
       </button>
    );
 }

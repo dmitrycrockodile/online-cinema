@@ -1,0 +1,127 @@
+@import "../../assets/style/variables.scss";
+
+.root {
+   padding-top: 18rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+.filmImage {
+   width: 43.8rem;
+   height: 43.8rem;
+   border-radius: 2rem;
+}
+
+.right {
+   width: 70rem;
+}
+
+.info {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-row-gap: 3rem;
+
+   .title {
+      font-weight: 700;
+      font-size: 4.8rem;
+      line-height: 5.2rem;
+      background: linear-gradient(266.28deg, $color-white 29.05%, rgba($color-white, 0.42) 114.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      grid-column: 1 / 5;
+   }
+   
+   .date {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      color: $color-gray-2;
+   }
+   
+   .bookmarks {
+      display: flex;
+      margin-top: 1.2rem;
+      justify-content: right;
+   
+      :last-child {
+         margin-left: 1rem;
+      }
+
+      .adultMarker {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: 700;
+         font-size: 1.2rem;
+         line-height: 1.4rem;
+         width: 3.3rem;
+         height: 2.8rem;
+         border-radius: .8rem;
+         background-color: $color-orange;
+         color: $color-white;
+      }
+      
+      .save {
+         height: fit-content;
+      
+         svg {
+            width: 25px;
+            height: 30px;
+         }
+      }
+   }
+   
+   .rating {
+      display: flex;
+      align-items: center;
+      justify-self: right;
+      grid-column: 4 / -1;
+   
+      .mark {
+         font-weight: 700;
+         font-size: 4.2rem;
+         color: $color-orange;
+      }
+   
+      .votes {
+         font-size: 12px;
+         line-height: 14px;
+         margin-left: .5rem;
+   
+         p {
+            font-weight: 500;
+         }
+   
+         span {
+            font-weight: 300;
+            color: $color-gray-1;
+         }
+      }
+   }
+}  
+
+.description {
+   margin-top: 2.5rem;
+   font-weight: 300;
+   font-size: 1.6rem;
+   line-height: 2.2rem;
+}
+
+.socials {
+   margin-top: 4rem;
+   display: flex;
+   align-items: center;
+
+   :not(:first-child) {
+      margin-left: 1.5rem;
+   }
+}
+
+.watch {
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   margin-top: -4rem;
+   gap: 2rem;
+}

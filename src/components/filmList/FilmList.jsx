@@ -36,7 +36,8 @@ const FilmList = ({
                title={title}
                date={date}
                adult={adult} 
-               key={id}/>)
+               key={id}
+               id={id}/>)
    });
 
    const skeletons = [...new Array(5)].map((_, index) => <Skeleton key={index} />);
