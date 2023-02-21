@@ -116,6 +116,47 @@
    :not(:first-child) {
       margin-left: 1.5rem;
    }
+
+   path {
+      fill: $color-gray-5;
+      transition: all .3s;
+   }
+
+   .youTube {
+      width: 2.9rem; 
+      height: 2rem;
+
+      &:hover path {
+         fill: $color-red-2;
+      }
+   }
+
+   .fb {
+      width: 2.1rem;
+      height: 2rem;
+
+      &:hover path {
+         fill: $color-blue-2;
+      }
+   }
+
+   .insta {
+      width: 2rem; 
+      height: 2rem;
+
+      &:hover path {
+         fill: $color-pink;
+      }
+   }
+
+   .vk {
+      width: 3.1rem;
+      height: 1.8rem;
+
+      &:hover path {
+         fill: $color-blue-3;
+      }
+   }
 }
 
 .watch {
