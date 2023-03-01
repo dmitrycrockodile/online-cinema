@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import useMovieService from "../../../services/MovieService";
+import useMovieService from "../../services/MovieService";
 
-import FilmItem from "../../filmItem/FilmItem";
-import Discount from "../../discount/Discount";
-import FilmList from "../../filmList/FilmList";
+import FilmItem from "../../components/filmItem/FilmItem";
+import Discount from "../../components/discount/Discount";
+import FilmList from "../../components/filmList/FilmList";
 
 import styles from "./filmPage.module.scss";
 

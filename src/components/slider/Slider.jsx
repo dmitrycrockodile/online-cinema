@@ -14,7 +14,7 @@ const Slider = ({ slideWidth, setActiveSlide, children }) => {
       setActiveSlide(offset / 100 + 1)
    }, [offset, setActiveSlide])
 
-   //Autoplay functionallity
+   // Autoplay functionallity
    useEffect(() => {
       let slideInterval;
       const _intervalDuration = 4000;

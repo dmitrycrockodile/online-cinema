@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Search from "../search/Search";
-import MainButton from "../mainButton/MainButton";
+import Search from "../../components/search/Search";
+import MainButton from "../../components/mainButton/MainButton";
 
 import logo from "../../assets/img/header-logo.svg";
 

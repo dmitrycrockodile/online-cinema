@@ -1,10 +1,10 @@
-import Banner from '../../banner/Banner';
-import FilmList from '../../filmList/FilmList';
-import About from '../../about/About';
-import Discount from '../../discount/Discount';
-import Selections from '../../selections/Selections';
-import Categories from '../../categories/Categories';
-import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
+import Banner from '../../components/banner/Banner';
+import FilmList from '../../components/filmList/FilmList';
+import About from '../../components/about/About';
+import Discount from '../../components/discount/Discount';
+import Selections from '../../components/selections/Selections';
+import Categories from '../../components/categories/Categories';
+import ErrorBoundary from '../../components/errorBoundary/ErrorBoundary';
 
 import styles from './home.module.scss';
 

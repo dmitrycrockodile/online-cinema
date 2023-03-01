@@ -4,6 +4,36 @@ import logo from "../../assets/img/footer-logo.svg";
 
 import styles from "./footer.module.scss";
 
+const links = [
+   {
+      listName: 'Жанры',
+      list: [
+         {title: 'Нонфикшн', href: '/'}, 
+         {title: 'Псиология', href: '/'}, 
+         {title: 'Бизнес', href: '/'}, 
+         {title: 'Финансы', href: '/'} , 
+         {title: 'Все жанры', href: '/'}
+      ]
+   },
+   {
+      listName: 'Категории',
+      list: [
+         {title: 'Популярное', href: '/'}, 
+         {title: 'Новинки', href: '/'}, 
+         {title: 'Выбор редакции', href: '/'}
+      ]
+   },
+   {
+      listName: 'Разделы',
+      list: [
+         {title: 'Как купить', href: '/'}, 
+         {title: 'Часто задаваемые вопросы', href: '/'}, 
+         {title: 'Сотрудничество', href: '/'},
+         {title: 'Контакты', href: '/'}
+      ]
+   }
+]
+
 const Footer = () => {
    return (
       <footer className={styles.footer}>
@@ -14,59 +44,22 @@ const Footer = () => {
                </Link>
 
                <div className={styles.lists}>
-                  <ul className={styles.list}>
-                  <li className={styles.listItem}>
-                     <h4>Жанры</h4>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Нонфикшн</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Псиология</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Бизнес</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Финансы</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Все жанры</a>
-                  </li>
-                  </ul>
-
-                  <ul className={styles.list}>
-                  <li className={styles.listItem}>
-                     <h4>Категории</h4>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Популярное</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Новинки</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Выбор редакции</a>
-                  </li>
-                  </ul>
-
-                  <ul className={styles.list}>
-                  <li className={styles.listItem}>
-                     <h4>Разделы</h4>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Как купить</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Часто задаваемые вопросы</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Сотрудничество</a>
-                  </li>
-                  <li className={styles.listItem}>
-                     <a className="underlined" href="/">Контакты</a>
-                  </li>
-                  </ul>
+                  {links.map((item, index) => {
+                     return (
+                        <ul className={styles.list}>
+                           <li className={styles.listItem} key={index}>
+                              {item.listName}
+                           </li>
+                           {item.list.map((item, index) => {
+                              return (
+                                 <li className={styles.listItem} key={index}>
+                                    <Link className="underlined" to={item.href}>{item.title}</Link>
+                                 </li>
+                              )
+                           })}
+                        </ul>
+                     )
+                  })}
                </div>
             </div>
          </div>

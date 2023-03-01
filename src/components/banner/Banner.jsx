@@ -1,72 +1,56 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import useMovieService from '../../services/MovieService';
 
 import MainButton from '../mainButton/MainButton';
 import Slider from '../slider/Slider';
+import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import styles from './banner.module.scss';
 import '../../assets/style/animations.scss';
 
 const Banner = () => {
    const [activeSlide, setActiveSlide] = useState(1);
+   const [movies, setMovies] = useState([]);
+
+   const {getMovieGroup, error} = useMovieService();
+
+   useEffect(() => {
+      getMovieGroup('popular').then(onMoviesLoaded);
+   }, [])
+
+   const onMoviesLoaded = (movies) => {
+      setMovies(movies)
+   }
 
    return (
       <div className={styles.banner}>
-         <Slider slideWidth={100} setActiveSlide={setActiveSlide}>
-                  <li className={`${styles.slide} ${styles.slide1} ${activeSlide === 1 ? styles.active : ''}`}>
-                     <div className="container">
-                        <div className={styles.slideInner}>
-                           <div>
-                              <p className={styles.slideTitle}>Книги, которые <br /> вам хочется слушать</p>
-                              <p className={styles.slideText}>
-                                 Лучшая подборка аудиокниг по психологиии саморазвитию за все годы издательства...
-                              </p>
+         {error 
+            ? <ErrorMessage/> 
+            : <Slider slideWidth={100} setActiveSlide={setActiveSlide}>
+               {movies.slice(16, 20).map(
+                  ({id, backdrop, title, description}, i) => (
+                     <li className={`${styles.slide} ${activeSlide === (i + 1) ? styles.active : ''}`} key={id} style={{backgroundImage: `url(${backdrop})`}}>
+                        <div className="container">
+                           <div className={styles.slideInner}>
+                              <div className={styles.slideInfo}>
+                                 <p className={styles.slideTitle}>{title}</p>
+                                 <p className={styles.slideText}>{`${description.slice(0, 80)}...`}</p>
+                              </div>
+                              <Link to={`/films/${id}`}>
+                                 <MainButton 
+                                    value="Watch online"
+                                    size="huge"
+                                    type="fullOrange"    
+                                    style={activeSlide === 1 ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}      
+                                 />
+                              </Link>
                            </div>
-                           <MainButton 
-                              value="Выбрать книгу"
-                              size="huge"
-                              type="fullOrange"    
-                              style={activeSlide === 1 ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}      
-                           />
                         </div>
-                     </div>
-                  </li>
-                  <li className={`${styles.slide} ${styles.slide2} ${activeSlide === 2 ? styles.active : ''}`}>
-                     <div className="container">
-                        <div className={styles.slideInner}>
-                           <div>
-                              <p className={styles.slideTitle}>Книги, которые <br /> вам хочется слушать</p>
-                              <p className={styles.slideText}>
-                                 Лучшая подборка аудиокниг по психологиии саморазвитию за все годы издательства...
-                              </p>
-                           </div>
-                           <MainButton 
-                              value="Выбрать книгу"
-                              size="huge"
-                              type="fullOrange"                            
-                              style={activeSlide === 2 ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}   
-                           />
-                        </div>
-                     </div>
-                  </li>
-                  <li className={`${styles.slide} ${styles.slide3} ${activeSlide === 3 ? styles.active : ''}`}>
-                     <div className="container">
-                        <div className={styles.slideInner}>
-                           <div>
-                              <p className={styles.slideTitle}>Книги, которые <br /> вам хочется слушать</p>
-                              <p className={styles.slideText}>
-                                 Лучшая подборка аудиокниг по психологиии саморазвитию за все годы издательства...
-                              </p>
-                           </div>
-                           <MainButton 
-                              value="Выбрать книгу"
-                              size="huge"
-                              type="fullOrange"                        
-                              style={activeSlide === 3 ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}        
-                           />
-                        </div>
-                     </div>
-                  </li>
-               </Slider>
+                     </li>
+               ))}
+            </Slider>
+         }
       </div>
    );
 }
