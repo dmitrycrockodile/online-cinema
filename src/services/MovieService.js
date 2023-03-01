@@ -37,6 +37,7 @@ const useMovieService = () => {
          description: movie.overview,
          highQualityImg: `${_apiImgLink}w500/${movie.poster_path}`,
          lowQualityImg: `${_apiImgLink}w300/${movie.poster_path}`,
+         backdrop: `${_apiImgLink}original/${movie.backdrop_path}`,
          date: movie.release_date,
          rating: `${Math.round(movie.vote_average * 10) / 10}`.replace(/\./, ','),
          voteCount: movie.vote_count

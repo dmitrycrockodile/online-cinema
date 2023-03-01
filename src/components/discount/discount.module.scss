@@ -17,15 +17,14 @@
 .film {
    position: relative;
    left: -7rem;
-   transform: scale(1.2);
+   transform: scale(1.5);
 
    @include respond(tab-land) {
      left: -4.5rem;
    }
 
    img {
-      height: 26rem;
-      width: 26rem;
+      width: 17rem;
       object-fit: cover;
       border-radius: 2.5rem;
 
@@ -37,10 +36,10 @@
 }
 
 .playBtn {
-   width: 8.5rem;
-   height: 8.5rem;
+   width: 7rem;
+   height: 7rem;
+   border: 2px solid rgba($color-white, .8);
    border-radius: 50%;
-   background-color: $color-orange;
    position: absolute;
    left: 50%;
    top: 50%;
@@ -51,15 +50,16 @@
    align-items: center;
 
    @include respond(tab-land) {
-      width: 7.5rem;
-      height: 7.5rem;
+      width: 6rem;
+      height: 6rem;
    }
 
    svg {
-      width: 2.5rem;
+      width: 2rem;
       height: 3rem;
       margin-left: 7px;
       margin-top: 2px;
+      fill: rgba($color-white, .8);
    }
 }
 

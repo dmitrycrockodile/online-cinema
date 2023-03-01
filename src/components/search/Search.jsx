@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import useOutside from '../../hooks/useOutside.hook';
 import useMovieService from '../../services/MovieService';
 
@@ -45,7 +46,9 @@ const Search = ({active, setActive}) => {
             key={id}
             title={title}
             description={description.slice(0, 70)}
-            date={date}/>
+            date={date}
+            id={id}
+            onCardClick={onOutsideClick}/>
       )
    })) : null;
 
@@ -77,18 +80,20 @@ const SearchCard = ({
    imageSource, 
    title, 
    description, 
-   date
+   date,
+   id,
+   onCardClick
 }) => {
    return (
-      <li>
-         <a className={styles.item} href="/">
+      <li onClick={onCardClick}>
+         <Link to={`/films/${id}`} className={styles.item}>
             <img srcSet={`${imageSource[0]} 1x, ${imageSource[1]} 2x`} alt={title} />
             <div className={styles.info}>
                <h3>{title}</h3>
                <span>{date}</span>
                <p>{description}...</p>
             </div>
-         </a>
+         </Link>
       </li>
    )
 }
