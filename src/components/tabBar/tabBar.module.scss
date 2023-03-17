@@ -16,10 +16,10 @@
    &::after {
       content: '';
       position: absolute;
-      height: 1px;
+      height: 3px;
       width: 100%;
       left: 0;
-      bottom: 4px;
+      bottom: -5px;
       background-color: $color-orange;
       transition: all .3s;
       opacity: 1;

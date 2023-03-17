@@ -42,7 +42,7 @@ const Banner = () => {
                                     value="Watch online"
                                     size="huge"
                                     type="fullOrange"    
-                                    style={activeSlide === 1 ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}      
+                                    style={activeSlide === (i + 1) ? {animation: "appear 1s .2s forwards", opacity: "0"} : {}}      
                                  />
                               </Link>
                            </div>

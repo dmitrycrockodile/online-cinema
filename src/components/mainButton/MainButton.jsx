@@ -7,7 +7,8 @@ const MainButton = ({
    size = "medium", 
    type = "fullOrange", 
    border, 
-   color, 
+   color,
+   disabled, 
    style
 }) => {
    const borderClass = border ? styles[border] : "";
@@ -16,7 +17,9 @@ const MainButton = ({
    return (
       <button 
          style={{...style}} 
-         className={`${styles.btn} ${styles[size]} ${styles[type]} ${borderClass} ${colorClass}`}>
+         type="submit"
+         className={`${styles.btn} ${styles[size]} ${styles[type]} ${borderClass} ${colorClass}`}
+         disabled={disabled}>
          {value}
          {border === "orangeBorder"  ? <><span></span><span></span><span></span><span></span></> : ''}
       </button>

@@ -1,0 +1,70 @@
+@import "../../assets/style/mixins.scss";
+@import "../../assets/style/variables.scss";
+
+.root {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 1000;
+   background-position: center left;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url("../../assets/img/slider1-1x.webp");
+
+   @media (min-resolution: 192dpi) and (min-width: 800px), (min-width: 2000px){
+      background-image: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .2)), url("../../assets/img/slider1-2x.webp");
+   }
+}
+
+.wrapper {
+   display: flex;
+   justify-content: space-between;
+   height: 100vh;
+}
+
+.logo {
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.right {
+   align-self: center;
+
+   .title {
+      font-weight: 700;
+      font-size: 6.2rem;
+      line-height: 6rem;
+      color: $color-white;
+      background: linear-gradient(265.57deg, #FFFFFF 24.49%, rgba(255, 255, 255, 0.42) 107.87%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+   
+      @include respond(tab-land) {
+         font-size: 5.8rem;
+         line-height: 5.6rem;
+      }
+   }
+   
+   .text {
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      max-width: 55rem;
+      margin-top: 1.4rem;
+   
+      @include respond(tab-land) {
+         font-size: 2.2rem;
+         line-height: 2.6rem;
+      }
+   }
+}
+
+.left {
+   margin-top: 30vh;
+}

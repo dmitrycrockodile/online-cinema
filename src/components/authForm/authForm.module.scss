@@ -1,0 +1,37 @@
+@import "../../assets/style/variables.scss";
+
+.form {
+   display: flex;
+   flex-direction: column;
+   margin-top: -1rem;
+   color: $color-white;
+
+   :last-child {
+      margin-top: 1.6rem;
+   }
+}
+
+.input {
+   width: 39.5rem;
+   height: 4.2rem;
+   border: 1px solid $color-white;
+   color: $color-white;
+   background-color: transparent;
+   border-radius: 5rem;
+   padding: 0 2.6rem;
+
+   &:not(:first-child) {
+      margin-top: 1.6rem;
+   }
+
+
+   &::placeholder {
+      color: $color-white;
+      font-weight: 400;
+      font-size: 1.4rem;
+   }
+}
+
+.btn {
+   margin-top: 1.6rem;
+}

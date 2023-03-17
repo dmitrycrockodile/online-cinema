@@ -46,8 +46,8 @@ const Footer = () => {
                <div className={styles.lists}>
                   {links.map((item, index) => {
                      return (
-                        <ul className={styles.list}>
-                           <li className={styles.listItem} key={index}>
+                        <ul className={styles.list} key={index}>
+                           <li className={styles.listItem}>
                               {item.listName}
                            </li>
                            {item.list.map((item, index) => {

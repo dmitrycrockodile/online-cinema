@@ -33,18 +33,22 @@ const Header = () => {
                </nav>
                <Search active={activeSearch} setActive={setActiveSearch} />
                <div className={styles.user}>
-                  <MainButton 
-                     value="Регистрация"
-                     size="medium"
-                     border="whiteBorder"
-                     type="transparent"
-                  />
-                  <MainButton 
-                     value="Войти"
-                     size="medium"
-                     border="blackBorder"
-                     type="fullOrange"
-                  />
+                  <Link to="/authentication">
+                     <MainButton 
+                        value="Регистрация"
+                        size="medium"
+                        border="whiteBorder"
+                        type="transparent"
+                     />
+                  </Link>
+                  <Link to="/authentication">
+                     <MainButton 
+                        value="Войти"
+                        size="medium"
+                        border="blackBorder"
+                        type="fullOrange"
+                     />
+                  </Link>
                </div>
             </div>
          </div>

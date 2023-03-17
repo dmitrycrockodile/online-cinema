@@ -31,6 +31,7 @@ const Categories = ({categories = []}) => {
                title={title}
                date={date}
                adult={adult} 
+               id={id}
                key={id}/>)
    });
 
